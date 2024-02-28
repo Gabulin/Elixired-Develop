@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Elixired-Develop/static/css/main.614dcba9.css",
-    "main.js": "/Elixired-Develop/static/js/main.614e81ad.js",
+    "main.css": "/Elixired-Develop/static/css/main.5b08ec21.css",
+    "main.js": "/Elixired-Develop/static/js/main.d5a78fbd.js",
     "static/media/Inter-Medium.woff": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff",
     "static/media/Inter-Medium.woff2": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff2",
     "static/media/Inter-Black.woff": "/Elixired-Develop/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -11,12 +11,20 @@
     "static/media/gray-box.jpg": "/Elixired-Develop/static/media/gray-box.97a4e8281d2daf2a752c.jpg",
     "static/media/logo_header.svg": "/Elixired-Develop/static/media/logo_header.0bed20a4dc36854205d3190772510a61.svg",
     "static/media/logo_footer.svg": "/Elixired-Develop/static/media/logo_footer.d83e14d19ed39c8e049d95313648af9e.svg",
+    "static/media/iconThemeNumber1.svg": "/Elixired-Develop/static/media/iconThemeNumber1.8065e81514d8393e96940b4cf09a0633.svg",
+    "static/media/logoTheory.svg": "/Elixired-Develop/static/media/logoTheory.a27f3887c93e9830a682a67c8ccd14ba.svg",
+    "static/media/iconInfo.svg": "/Elixired-Develop/static/media/iconInfo.55bdce0202a91d26693d0c228ef2f9b1.svg",
+    "static/media/buttonPressed.svg": "/Elixired-Develop/static/media/buttonPressed.cfdcae74a3a91801d449cd27b0b90435.svg",
+    "static/media/buttonStandart.svg": "/Elixired-Develop/static/media/buttonStandart.92dd2ed610edeeeabfed2073309c1afb.svg",
     "index.html": "/Elixired-Develop/index.html",
-    "main.614dcba9.css.map": "/Elixired-Develop/static/css/main.614dcba9.css.map",
-    "main.614e81ad.js.map": "/Elixired-Develop/static/js/main.614e81ad.js.map"
+    "static/media/iconBook.svg": "/Elixired-Develop/static/media/iconBook.d83b6ed92328812d388f5880d72d962f.svg",
+    "static/media/buttomBlocked.svg": "/Elixired-Develop/static/media/buttomBlocked.5c74191caf9f032bb25dfbf17b93680c.svg",
+    "static/media/popupButton.svg": "/Elixired-Develop/static/media/popupButton.2b9850149cee4cc9660bc6f97db8e31e.svg",
+    "main.5b08ec21.css.map": "/Elixired-Develop/static/css/main.5b08ec21.css.map",
+    "main.d5a78fbd.js.map": "/Elixired-Develop/static/js/main.d5a78fbd.js.map"
   },
   "entrypoints": [
-    "static/css/main.614dcba9.css",
-    "static/js/main.614e81ad.js"
+    "static/css/main.5b08ec21.css",
+    "static/js/main.d5a78fbd.js"
   ]
 }
