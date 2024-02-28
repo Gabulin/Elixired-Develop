@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Elixired-Develop/static/css/main.5b08ec21.css",
-    "main.js": "/Elixired-Develop/static/js/main.d5a78fbd.js",
+    "main.js": "/Elixired-Develop/static/js/main.06ea024b.js",
     "static/media/Inter-Medium.woff": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff",
     "static/media/Inter-Medium.woff2": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff2",
     "static/media/Inter-Black.woff": "/Elixired-Develop/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -21,10 +21,10 @@
     "static/media/buttomBlocked.svg": "/Elixired-Develop/static/media/buttomBlocked.5c74191caf9f032bb25dfbf17b93680c.svg",
     "static/media/popupButton.svg": "/Elixired-Develop/static/media/popupButton.2b9850149cee4cc9660bc6f97db8e31e.svg",
     "main.5b08ec21.css.map": "/Elixired-Develop/static/css/main.5b08ec21.css.map",
-    "main.d5a78fbd.js.map": "/Elixired-Develop/static/js/main.d5a78fbd.js.map"
+    "main.06ea024b.js.map": "/Elixired-Develop/static/js/main.06ea024b.js.map"
   },
   "entrypoints": [
     "static/css/main.5b08ec21.css",
-    "static/js/main.d5a78fbd.js"
+    "static/js/main.06ea024b.js"
   ]
 }
