@@ -8,12 +8,11 @@ import './App.css';
 
 const App = () => {
   return (
-    <Router>
       <div className="app">
         {/* Use Routes as the top-level container */}
         <Routes>
           {/* Route for MainContent */}
-          <Route path="/main" element={<>
+          <Route path="/Elixired-Develop" element={<>
             <Header />
             <MainContent />
             <Footer />
@@ -27,7 +26,6 @@ const App = () => {
           </>} />
         </Routes>
       </div>
-    </Router>
   );
 };
 
