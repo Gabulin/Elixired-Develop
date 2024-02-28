@@ -1,0 +1,44 @@
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  margin: 18px auto 0 auto;
+  gap: 138px;
+}
+
+.main_text {
+  font-size: 48px; 
+  font-weight: 900;
+  font-family: 'Inter Black', sans-serif; 
+  line-height: 1.1;
+  margin: 10px 0 0 0;
+  letter-spacing: -3px;
+}
+
+.main_subtext {
+  font-size: 24px; 
+  font-family: 'Inter Light'; 
+  margin-top: 25px;
+  margin-bottom: 54px;
+}
+
+.trial-button {
+  background-color: #8F00FF;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px; 
+  font-family: 'Helvetica Bold', sans-serif; 
+  width: 100%;
+  height: 59px;
+}
+
+.main-content_media__img {
+  width: 640px;
+  height: 360px;
+}
+
+.main-content_text-container {
+  max-width: 503px;
+}

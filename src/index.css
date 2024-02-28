@@ -1,0 +1,10 @@
+#root {
+  background-color: #fafafa;
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+}
+
+@import url("./vendor/normalize.css");
+@import url("./vendor/fonts/inter.css");
+
+
