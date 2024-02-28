@@ -1,0 +1,24 @@
+.image-button-container {
+  position: relative;
+  display: inline-block;
+}
+  
+.button-image {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button-image:active {
+  transform: translateY(4px);
+}
+  
+.popup-svg {
+  position: absolute;
+  top:-36px; /* Исправлено: Настройте по необходимости */
+  left: 50%; /* Исправлено: Настройте по необходимости */
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+}
