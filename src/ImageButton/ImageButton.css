@@ -11,14 +11,28 @@
 .button-image:active {
   transform: translateY(4px);
 }
+
+@keyframes myAnim {
+	0% {
+		transform: scale(0.5);
+		transform-origin: 50% 100%;
+	}
+
+	100% {
+		transform: scale(1);
+		transform-origin: 50% 100%;
+	}
+}
   
 .popup-svg {
+  animation: myAnim 2s ease 0s 1 normal forwards;
   position: absolute;
-  top:-36px; /* Исправлено: Настройте по необходимости */
-  left: 50%; /* Исправлено: Настройте по необходимости */
+  top:-45px; 
+  left: -10px; 
   transform: translateX(-50%);
   z-index: 2;
   cursor: pointer;
   width: 100px;
   height: 50px;
 }
+

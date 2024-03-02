@@ -1,8 +1,7 @@
 .theory_main {
     display: flex;
-    margin-left: 320px;
-    margin-right: 320px;
-    gap: 152px;
+    margin-left: 16.7%;
+    gap: 9.2%;
   }
   
   .theory_main__inform, .theory_main__interact {
