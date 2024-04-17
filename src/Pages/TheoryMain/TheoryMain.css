@@ -1,0 +1,137 @@
+.thery__flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.theory_main {
+    display: flex;
+    margin-bottom: 120px;
+  }
+
+  .goBackButton__container {
+    margin-top: 57px;
+  }
+  
+  .theory_main__inform, .theory_main__interact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .theory_main__interact {
+    margin-top: 90px;
+  }
+  
+  .theory_main__inform {
+    width: 488px;
+    height: 342px;
+    border-radius: 10px;
+    border: 2px solid #DBDBDB;
+    margin-top: 55px;
+    margin-left: 100px
+  }
+  
+  .theory_main__inform h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+  }
+  
+  .theory_main__inform p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  .theory_main__inform .lessons {
+    font-size: 15px;
+  }
+  
+  .theory_main__interact {
+    width: 640px;
+  }
+  
+  .theory_main__interact h2 {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+  }
+  
+  .interact_buttons {
+    margin-top: 35px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .button_container {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Настройте зазор по мере необходимости */
+    margin-left: 100px;
+  }
+  
+  .button_container p {
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Настройте по мере необходимости */
+  }
+
+  .theory_main__interact-text {
+    padding-top: 30px;
+    padding-left: 24px;
+    margin: 0 0 0 0;
+    min-width: 550px;
+  }
+
+  .theory-logo {
+    height: 70px;
+    width: 70px;
+    margin: 50px 0 0 51px;
+  }
+  
+ .theory_main-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+ }
+
+ .theory_inform-text {
+    margin: 20px 0 0 34px;
+ }
+
+ .iconInfo {
+    margin-left: 50px;
+ }
+
+ .iconBook {
+    margin-right: 16px;
+ }
+
+ .theory_main__inform-subtext {
+    margin-top: 25px;
+    margin-left: 34px;
+    line-height: 1.5;
+    width: 80%;
+ }
+
+ .interact__flex {
+  display: flex;
+  flex-direction: column;
+ } 
+
+.theme__container {
+  position: relative;
+  text-align: center;
+}
+.theme__image {
+  display: inline-block;
+}
+.theme__number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 28px;
+  font-weight: 800;
+  font-family: Arial;
+}
+
+  
