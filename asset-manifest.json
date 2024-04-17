@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Elixired-Develop/static/css/main.499b3f59.css",
-    "main.js": "/Elixired-Develop/static/js/main.7e633e6d.js",
+    "main.js": "/Elixired-Develop/static/js/main.94134309.js",
     "static/media/Inter-Medium.woff": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff",
     "static/media/Inter-Medium.woff2": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff2",
     "static/media/Inter-Black.woff": "/Elixired-Develop/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -27,10 +27,10 @@
     "static/media/popupButtonHover.svg": "/Elixired-Develop/static/media/popupButtonHover.8456328f0530aab36fb700a0eefd98d9.svg",
     "static/media/iconThemeNumber1.svg": "/Elixired-Develop/static/media/iconThemeNumber1.788995254c0850faf7e313e4b1cdfc6a.svg",
     "main.499b3f59.css.map": "/Elixired-Develop/static/css/main.499b3f59.css.map",
-    "main.7e633e6d.js.map": "/Elixired-Develop/static/js/main.7e633e6d.js.map"
+    "main.94134309.js.map": "/Elixired-Develop/static/js/main.94134309.js.map"
   },
   "entrypoints": [
     "static/css/main.499b3f59.css",
-    "static/js/main.7e633e6d.js"
+    "static/js/main.94134309.js"
   ]
 }
