@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Elixired-Develop/static/css/main.f522045c.css",
-    "main.js": "/Elixired-Develop/static/js/main.6722801e.js",
+    "main.css": "/Elixired-Develop/static/css/main.499b3f59.css",
+    "main.js": "/Elixired-Develop/static/js/main.55887a5b.js",
     "static/media/Inter-Medium.woff": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff",
     "static/media/Inter-Medium.woff2": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff2",
     "static/media/Inter-Black.woff": "/Elixired-Develop/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -9,22 +9,28 @@
     "static/media/Inter-Black.woff2": "/Elixired-Develop/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Regular.woff2": "/Elixired-Develop/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "static/media/gray-box.jpg": "/Elixired-Develop/static/media/gray-box.97a4e8281d2daf2a752c.jpg",
+    "static/media/blood.svg": "/Elixired-Develop/static/media/blood.001d8dc1a4ea5d9ee2c1dcd4cfb869cd.svg",
     "static/media/logo_header.svg": "/Elixired-Develop/static/media/logo_header.0bed20a4dc36854205d3190772510a61.svg",
     "static/media/logo_footer.svg": "/Elixired-Develop/static/media/logo_footer.d83e14d19ed39c8e049d95313648af9e.svg",
-    "static/media/iconThemeNumber1.svg": "/Elixired-Develop/static/media/iconThemeNumber1.8065e81514d8393e96940b4cf09a0633.svg",
+    "static/media/bed.svg": "/Elixired-Develop/static/media/bed.1aaef52cb47a33a96fdeeca5012c917b.svg",
     "static/media/logoTheory.svg": "/Elixired-Develop/static/media/logoTheory.a27f3887c93e9830a682a67c8ccd14ba.svg",
+    "static/media/leg.svg": "/Elixired-Develop/static/media/leg.20e7aa785ecdb39be5076181447136b2.svg",
     "static/media/iconInfo.svg": "/Elixired-Develop/static/media/iconInfo.55bdce0202a91d26693d0c228ef2f9b1.svg",
     "static/media/buttonPressed.svg": "/Elixired-Develop/static/media/buttonPressed.cfdcae74a3a91801d449cd27b0b90435.svg",
     "static/media/buttonStandart.svg": "/Elixired-Develop/static/media/buttonStandart.92dd2ed610edeeeabfed2073309c1afb.svg",
     "index.html": "/Elixired-Develop/index.html",
     "static/media/iconBook.svg": "/Elixired-Develop/static/media/iconBook.d83b6ed92328812d388f5880d72d962f.svg",
+    "static/media/GoBackButton.svg": "/Elixired-Develop/static/media/GoBackButton.eeb6e5d3346dbe83c3dc.svg",
     "static/media/buttomBlocked.svg": "/Elixired-Develop/static/media/buttomBlocked.5c74191caf9f032bb25dfbf17b93680c.svg",
     "static/media/popupButton.svg": "/Elixired-Develop/static/media/popupButton.2b9850149cee4cc9660bc6f97db8e31e.svg",
-    "main.f522045c.css.map": "/Elixired-Develop/static/css/main.f522045c.css.map",
-    "main.6722801e.js.map": "/Elixired-Develop/static/js/main.6722801e.js.map"
+    "static/media/empty.svg": "/Elixired-Develop/static/media/empty.5c7714d30218c5d847c03bc7aaca7527.svg",
+    "static/media/popupButtonHover.svg": "/Elixired-Develop/static/media/popupButtonHover.8456328f0530aab36fb700a0eefd98d9.svg",
+    "static/media/iconThemeNumber1.svg": "/Elixired-Develop/static/media/iconThemeNumber1.788995254c0850faf7e313e4b1cdfc6a.svg",
+    "main.499b3f59.css.map": "/Elixired-Develop/static/css/main.499b3f59.css.map",
+    "main.55887a5b.js.map": "/Elixired-Develop/static/js/main.55887a5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f522045c.css",
-    "static/js/main.6722801e.js"
+    "static/css/main.499b3f59.css",
+    "static/js/main.55887a5b.js"
   ]
 }
