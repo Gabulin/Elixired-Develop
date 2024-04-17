@@ -1,0 +1,29 @@
+@import url("../Component_Lists.css");
+
+.interactions__text {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.interactions__description_content-text {
+    margin: 35px 25px 35px 25px;
+}
+.interactions__name-title {
+    width: 135px;
+    height: 38px;
+    background-color: #8f00ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.int__name_last {
+    width: 194px;
+}
+
+.interactions__heading {
+    font-size: 26px;
+    font-weight: 500;
+}

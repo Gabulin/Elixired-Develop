@@ -1,0 +1,12 @@
+.goBackButton {
+    background-image: url('../../Media/GoBackButton/GoBackButton.svg');
+    background-repeat: no-repeat;
+    border: none;
+    background-color: #F8F8F8;
+    width: 51px;
+    height: 51px;
+}
+
+.goBackButton:hover {
+    cursor: pointer;
+}

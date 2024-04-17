@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainContent.css';
-import grayBox from '../Media/gray-box.jpg'
+import grayBox from '../../Media/gray-box.jpg'
 import { Link } from 'react-router-dom';
 
 const MainContent = () => {
