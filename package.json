@@ -1,7 +1,7 @@
 {
   "name": "testproject",
   "version": "0.1.0",
-  "homepage": "https://strong-zabaione-ee5062.netlify.app/",
+  "homepage": "https://gabulin.github.io/Elixired-Develop",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
