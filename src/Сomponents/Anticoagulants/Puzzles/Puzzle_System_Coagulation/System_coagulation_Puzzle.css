@@ -16,6 +16,7 @@
 }
 
 .puzzle__workspace_panel {
+  position: relative;
   width: 842px;
   height: 484px;
   background-color: #ffffff;
@@ -98,6 +99,13 @@
   font-weight: 400;
 }
 
+.dot_subtext {
+  margin-right: 2px;
+}
+.dot_subtext_point {
+ margin-top: 24px;
+}
+
 .puzzle__restart {
   width: 100%;
   height: 62px;
@@ -146,3 +154,7 @@
   background-color: #e8e8e8;
   cursor: pointer;
 }
+
+
+
+

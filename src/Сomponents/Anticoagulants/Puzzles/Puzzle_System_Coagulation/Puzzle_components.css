@@ -1,0 +1,302 @@
+.puzzle__workspace_panel .picture {
+    position: absolute;
+    transition: top 0.5s ease, left 0.5s ease;
+  }
+
+/*Размеры */
+  .puzzle__workspace_panel .picture-1,
+  .puzzle__workspace_panel .picture-6,
+  .puzzle__workspace_panel .picture-7,
+  .puzzle__workspace_panel .picture-8 {
+    position: absolute;
+      width: 106px;
+      height: 31px;
+  }
+
+  .puzzle__workspace_panel .picture-2,
+.puzzle__workspace_panel .picture-3,
+.puzzle__workspace_panel .picture-4,
+.puzzle__workspace_panel .picture-5,
+.puzzle__workspace_panel .picture-10 {
+    position: absolute;
+    width: 41px;
+    height: 31px;
+}
+
+.puzzle__workspace_panel .picture-9 {
+    position: absolute;
+    width: 131px;
+    height: 31px;
+}
+
+
+/*Положение перетаскиваемых элементов */
+.puzzle__workspace_panel .picture-1 {
+    top: 20px;
+    left: 35px;
+}
+
+.puzzle__workspace_panel .picture-2 {
+    top: 80px;
+    left: 19px;
+}
+
+.puzzle__workspace_panel .picture-3 {
+    top: 140px;
+    left: 70px;
+}
+
+.puzzle__workspace_panel .picture-4 {
+    top: 200px;
+    left: 120px;
+}
+
+.puzzle__workspace_panel .picture-5 {
+    top: 260px;
+    left: 165px;
+}
+
+.puzzle__workspace_panel .picture-6 {
+    top: 320px;
+    left: 450px;
+}
+
+.puzzle__workspace_panel .picture-7 {
+    top: 379px;
+    left: 366px;
+}
+
+.puzzle__workspace_panel .picture-8 {
+    top: 379px;
+    left: 532px;
+}
+
+.puzzle__workspace_panel .picture-9 {
+    top: 320px;
+    left: 635px;
+}
+
+.puzzle__workspace_panel .picture-10 {
+    top: 200px;
+    left: 452px;
+}
+
+/*Положение элементов фона */
+
+.puzzle__workspace_panel .back_con_1 {
+    position: absolute;
+    top: 14px;
+    left: 385px;
+    font-family: "Inter";
+    text-align: center;
+    font-size: 16px;
+    height: 40px;
+    font-weight: 400;
+}
+
+.puzzle__workspace_panel .back_con_2 {
+    position: absolute;
+    top: 28px;
+    left: 320px;
+}
+
+.puzzle__workspace_panel .back_con_3 {
+    position: absolute;
+    top: 18px;
+    left: 211px;
+}
+
+.puzzle__workspace_panel .back_con_4 {
+    position: absolute;
+    top: 28px;
+    left: 146px;
+}
+
+.puzzle__workspace_panel .back_con_5 {
+    position: absolute;
+    top: 56px;
+    left: 82px;
+}
+
+.puzzle__workspace_panel .back_con_6 {
+    position: absolute;
+    top: 88px;
+    left: 65px;
+}
+
+.puzzle__workspace_panel .back_con_7 {
+    position: absolute;
+    top: 80px;
+    left: 120px;
+}
+
+.puzzle__workspace_panel .back_con_8 {
+    position: absolute;
+    top: 115px;
+    left: 132px;
+}
+
+.puzzle__workspace_panel .back_con_9 {
+    position: absolute;
+    top: 148px;
+    left: 115px;
+}
+
+.puzzle__workspace_panel .back_con_10 {
+    position: absolute;
+    top: 139px;
+    left: 171px;
+}
+
+.puzzle__workspace_panel .back_con_11 {
+    position: absolute;
+    top: 175px;
+    left: 183px;
+}
+
+.puzzle__workspace_panel .back_con_12 {
+    position: absolute;
+    top: 207px;
+    left: 165px;
+}
+
+.puzzle__workspace_panel .back_con_13 {
+    position: absolute;
+    top: 199px; 
+    left: 222px;
+}
+
+.puzzle__workspace_panel .back_con_14 {
+    position: absolute;
+    top: 237px;
+    left: 184px;
+    font-family: "Inter";
+    text-align: center;
+    font-size: 16px;
+    height: 20px;
+    font-weight: 400;
+}
+
+.puzzle__workspace_panel .back_con_15 {
+    position: absolute;
+    top: 234px;
+    left: 234px;
+}
+
+.puzzle__workspace_panel .back_con_16 {
+    position: absolute;
+    top: 266px;
+    left: 210px;
+} 
+
+.puzzle__workspace_panel .back_con_17 {
+    position: absolute;
+    top: 199px;
+    left: 341px;
+}
+
+.puzzle__workspace_panel .back_con_18 {
+    position: absolute;
+    top: 235px;
+    left: 353px;
+}
+
+.puzzle__workspace_panel .back_con_19 {
+    position: absolute;
+    top: 237px;
+    left: 366px;
+    font-family: "Inter";
+    text-align: center;
+    font-size: 16px;
+    height: 20px;
+    font-weight: 400;
+}
+
+.puzzle__workspace_panel .back_con_20 {
+    position: absolute;
+    top: 259px;
+    left: 399px;
+}
+
+.puzzle__workspace_panel .back_con_21 {
+    position: absolute;
+    top: 295px;
+    left: 411px;
+}
+
+.puzzle__workspace_panel .back_con_22 {
+    position: absolute;
+    top: 297px;
+    left: 375px;
+    font-family: "Inter";
+    text-align: center;
+    font-size: 16px;
+    height: 20px;
+    font-weight: 400;
+}
+
+.puzzle__workspace_panel .back_con_23 {
+    position: absolute;
+    top: 319px;
+    left: 284px; 
+}
+
+.puzzle__workspace_panel .back_con_24 {
+    position: absolute;
+    top: 327px;
+    left: 393px;
+}
+
+.puzzle__workspace_panel .back_con_25 {
+    position: absolute;
+    top: 354px;
+    left: 494px;
+}
+
+.puzzle__workspace_panel .back_con_26 {
+    position: absolute;
+    top: 387px;
+    left: 478px;
+}
+
+.puzzle__workspace_panel .back_con_27 {
+    position: absolute;
+    top: 328px;
+    left: 585px;
+}
+
+.puzzle__workspace_panel .back_con_28 {
+    position: absolute;
+    top: 194px;
+    left: 574px;
+    font-family: "Inter";
+    text-align: center;
+    font-size: 16px;
+    height: 40px;
+    font-weight: 400;
+}
+
+.puzzle__workspace_panel .back_con_29 {
+    position: absolute;
+    top: 206px;
+    left: 497px;
+}
+
+.puzzle__workspace_panel .back_con_30 {
+    position: absolute;
+    top: 206px;
+    left: 386px;
+}
+
+.fade-in {
+    animation: fadeIn ease-in-out 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

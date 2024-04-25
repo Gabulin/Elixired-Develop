@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 //стили
 import "./App.css";
@@ -35,11 +37,13 @@ const App = () => {
 
   return (
     <main className="app">
+       <DndProvider backend={HTML5Backend}>
       <Routes>
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
+      </DndProvider>
     </main>
   );
 };
