@@ -19,11 +19,13 @@ import Anticoagulants_Slider_Main_Indicators from "../../Pages/Anticoagulants/Sl
 import Slider_General_Contraindications_Ant from "../Anticoagulants/Slider_General_Contraindications_Ant";
 // Взимодейстаия Антикоагулянты
 import Slider_Interactions_Ant from "../Anticoagulants/Slider_Interactions_Ant";
+// Тест пазла
+import System_coagulation_Puzzle from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/System_coagulation_Puzzle";
 
 const App = () => {
   // Массив с данными о роутах
   const routes = [
-    { path: "/Elixired-Develop", element: <><Header /><MainContent /><Footer /></> },
+    { path: "/Elixired-Develop", element: <><Header /><System_coagulation_Puzzle /><Footer /></> },
     { path: "/theory", element: <><Header /><TheoryMain /><Footer /></> },
     { path: "/anticoagulants/main_Indicators", element: <><Header /><Anticoagulants_Slider_Main_Indicators /><Footer /></> },
     { path: "/anticoagulants/general_contraindications", element: <><Header /><Slider_General_Contraindications_Ant /><Footer /></> },

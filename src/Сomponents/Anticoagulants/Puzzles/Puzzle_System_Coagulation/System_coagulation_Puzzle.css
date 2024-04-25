@@ -1,0 +1,148 @@
+.puzzle__main_container {
+  max-width: 1280px;
+  margin: 44px auto 85px auto;
+}
+
+.puzzle__component {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+}
+
+.puzzle__workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.puzzle__workspace_panel {
+  width: 842px;
+  height: 484px;
+  background-color: #ffffff;
+}
+
+.puzzle__workspace_slider {
+  width: 842px;
+  height: 134px;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.puzzle__slider_content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  width: 694px;
+  height: 114px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #cecece;
+  overflow-x: hidden; 
+}
+
+.puzzle__name {
+  margin-bottom: 31px;
+  font-size: 24px;
+  font-family: "Inter";
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.puzzle__inform-click {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.puzzle__inform-click_textarea {
+  width: 416px;
+  height: 484px;
+  background-color: #f4f5f5;
+  overflow-y: auto;
+  position: relative;
+}
+
+.puzzle__inform-click_textarea::-webkit-scrollbar {
+  width: 11px;
+}
+
+.puzzle__inform-click_textarea::-webkit-scrollbar-thumb {
+  background-color: #a4a4a4;
+  border-radius: 10px;
+}
+
+.puzzle__inform-click_textarea::-webkit-scrollbar-track {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+.puzzle__task_main-text {
+  margin-top: 45px;
+  margin-left: 15px;
+  margin-right: auto;
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.puzzle__task_sub-text {
+  max-width: 366px;
+  margin-top: 25px;
+  margin-left: 15px;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.puzzle__restart {
+  width: 100%;
+  height: 62px;
+  background-color: #e4dbef;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.puzzle__next {
+  width: 100%;
+  height: 62px;
+  background-color: #d9d9d9;
+  border: none;
+  font-size: 26px;
+  opacity: 20%;
+  cursor: pointer;
+}
+
+.puzzle__inform-click_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.puzzle__slider_button-left {
+  margin-right: 18px;
+  background-image: url("../../../../Media/Anticoagulants/Puzzle/puzzle_button_left.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 9px;
+  height: 18px;
+  border: none;
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+
+.puzzle__slider_button-right {
+  margin-left: 18px;
+  background-image: url("../../../../Media/Anticoagulants/Puzzle/puzzle_button_right.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 9px;
+  height: 18px;
+  border: none;
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
