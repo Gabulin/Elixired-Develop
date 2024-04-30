@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Elixired-Develop/static/css/main.106040c7.css",
-    "main.js": "/Elixired-Develop/static/js/main.8eef570a.js",
+    "main.js": "/Elixired-Develop/static/js/main.447c2717.js",
     "static/media/Inter-Medium.woff": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff",
     "static/media/Inter-Medium.woff2": "/Elixired-Develop/static/media/Inter-Medium.16eda82a3c37a6edda09.woff2",
     "static/media/Inter-Black.woff": "/Elixired-Develop/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -27,13 +27,13 @@
     "static/media/Xa.svg": "/Elixired-Develop/static/media/Xa.6b6c721589a0d872bc4a55aaa69daf4d.svg",
     "static/media/logoTheory.svg": "/Elixired-Develop/static/media/logoTheory.a27f3887c93e9830a682a67c8ccd14ba.svg",
     "static/media/leg.svg": "/Elixired-Develop/static/media/leg.20e7aa785ecdb39be5076181447136b2.svg",
-    "static/media/iconInfo.svg": "/Elixired-Develop/static/media/iconInfo.55bdce0202a91d26693d0c228ef2f9b1.svg",
+    "static/media/iconInfo.svg": "/Elixired-Develop/static/media/iconInfo.965f43a00df2623f97d693f518365aa8.svg",
     "static/media/buttonPressed.svg": "/Elixired-Develop/static/media/buttonPressed.cfdcae74a3a91801d449cd27b0b90435.svg",
     "static/media/buttonStandart.svg": "/Elixired-Develop/static/media/buttonStandart.92dd2ed610edeeeabfed2073309c1afb.svg",
     "index.html": "/Elixired-Develop/index.html",
     "static/media/puzzle_arrow_tray.svg": "/Elixired-Develop/static/media/puzzle_arrow_tray.282f2f9ef1fd64e231345cc4c6bd6293.svg",
-    "static/media/iconBook.svg": "/Elixired-Develop/static/media/iconBook.d83b6ed92328812d388f5880d72d962f.svg",
-    "static/media/puzzle_arrow_right_big.svg": "/Elixired-Develop/static/media/puzzle_arrow_right_big.8b74de481eb72f4fee69bb42bdaf52a5.svg",
+    "static/media/iconBook.svg": "/Elixired-Develop/static/media/iconBook.4499fec6dafb22cdd0b97bb961f8b954.svg",
+    "static/media/puzzle_arrow_right_big.svg": "/Elixired-Develop/static/media/puzzle_arrow_right_big.6b8ef4f8a4c9c16a955d4260e9b09b98.svg",
     "static/media/puzzle_arrow_down.svg": "/Elixired-Develop/static/media/puzzle_arrow_down.e8477676a209347f53c158d41c1e4d42.svg",
     "static/media/puzzle_arrow_left.svg": "/Elixired-Develop/static/media/puzzle_arrow_left.67d9e3a2bdd5ee1f6d9c6813b7d29120.svg",
     "static/media/puzzle_arrow_right.svg": "/Elixired-Develop/static/media/puzzle_arrow_right.eaebabfb11478f3ac744d2cdeecda8ae.svg",
@@ -52,10 +52,10 @@
     "static/media/popupButtonHover.svg": "/Elixired-Develop/static/media/popupButtonHover.8456328f0530aab36fb700a0eefd98d9.svg",
     "static/media/iconThemeNumber1.svg": "/Elixired-Develop/static/media/iconThemeNumber1.788995254c0850faf7e313e4b1cdfc6a.svg",
     "main.106040c7.css.map": "/Elixired-Develop/static/css/main.106040c7.css.map",
-    "main.8eef570a.js.map": "/Elixired-Develop/static/js/main.8eef570a.js.map"
+    "main.447c2717.js.map": "/Elixired-Develop/static/js/main.447c2717.js.map"
   },
   "entrypoints": [
     "static/css/main.106040c7.css",
-    "static/js/main.8eef570a.js"
+    "static/js/main.447c2717.js"
   ]
 }
