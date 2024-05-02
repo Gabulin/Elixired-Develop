@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-import "./Task_Main_Indicators_Anticoagulants.css"; 
+import "./TaskMainIndicatorsAnticoagulants.css"; 
 
-const Task_Main_Indicators_Anticoagulants_One = ({ handleContinue }) => {
+const TaskMainIndicatorsAnticoagulantsOne = ({ handleContinue }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const handleClick = () => {
     setIsFlipped(!isFlipped);
@@ -85,4 +85,4 @@ const Task_Main_Indicators_Anticoagulants_One = ({ handleContinue }) => {
   );
 };
 
-export default Task_Main_Indicators_Anticoagulants_One;
+export default TaskMainIndicatorsAnticoagulantsOne;

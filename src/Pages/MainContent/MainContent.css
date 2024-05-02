@@ -3,13 +3,16 @@
   flex-direction: row;
   justify-self: center;
   margin: 18px auto 0 auto;
-  gap: 138px;
+  padding-right: 100px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1131px;
 }
 
 .main_text {
   font-size: 48px; 
   font-weight: 900;
-  font-family: 'Inter Black', sans-serif; 
+  font-family: 'Inter';
   line-height: 1.1;
   margin: 10px 0 0 0;
   letter-spacing: -3px;
@@ -29,13 +32,13 @@
   cursor: pointer;
   font-size: 20px; 
   font-family: 'Helvetica Bold', sans-serif; 
-  width: 100%;
+  width: 503px;
   height: 59px;
 }
 
 .main-content_media__img {
-  width: 640px;
-  height: 360px;
+  width: 340x;
+  height: 340px;
 }
 
 .main-content_text-container {

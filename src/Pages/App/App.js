@@ -16,23 +16,30 @@ import NotFoundPage from "../NotFound/NotFound";
 //Выбор темы Антикоагулянты
 import TheoryMain from "../TheoryMain/TheoryMain";
 //Основные показания Антикоагулянты
-import Anticoagulants_Slider_Main_Indicators from "../../Pages/Anticoagulants/Slider_Main_Indicators";
+import SliderMainIndicators from "../Anticoagulants/SliderMainIndicators";
 //Общие противопоказания Антикоагулянты
-import Slider_General_Contraindications_Ant from "../Anticoagulants/Slider_General_Contraindications_Ant";
+import SliderGeneralContraindicationsAnt from "../Anticoagulants/SliderGeneralContraindicationsAnt";
 // Взимодейстаия Антикоагулянты
-import Slider_Interactions_Ant from "../Anticoagulants/Slider_Interactions_Ant";
+import SliderInteractionsAnt from "../Anticoagulants/SliderInteractionsAnt";
+//
+import SliderSystemCoagulationPuzzle from "../Anticoagulants/SliderSystemCoagulationPuzzle";
 // Тест пазла
-import System_coagulation_Puzzle from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/System_coagulation_Puzzle";
+import SystemCoagulationPuzzle from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationPuzzle";
+// Тест видео
+import SystemCoagulationVideo from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationVideo";
+
 
 const App = () => {
   // Массив с данными о роутах
   const routes = [
-    { path: "/Elixired-Develop", element: <><Header /><System_coagulation_Puzzle /><Footer /></> },
+    { path: "", element: <><Header/><MainContent /><Footer /></> },
     { path: "/theory", element: <><Header /><TheoryMain /><Footer /></> },
-    { path: "/anticoagulants/main_Indicators", element: <><Header /><Anticoagulants_Slider_Main_Indicators /><Footer /></> },
-    { path: "/anticoagulants/general_contraindications", element: <><Header /><Slider_General_Contraindications_Ant /><Footer /></> },
-    { path: "/anticoagulants/interactions", element: <><Header /><Slider_Interactions_Ant /><Footer /></> },
-    { path: "*", element: <><NotFoundPage /></> }
+    { path: "/anticoagulants/main_Indicators", element: <><Header /><SliderMainIndicators /><Footer /></> },
+    { path: "/anticoagulants/general_contraindications", element: <><Header /><SliderGeneralContraindicationsAnt /><Footer /></> },
+    { path: "/anticoagulants/interactions", element: <><Header /><SliderInteractionsAnt /><Footer /></> },
+    { path: "*", element: <><NotFoundPage /></> },
+    { path: "/notfoundpage", element: <><NotFoundPage /></> },
+    { path: "/anticoagulants/puzzles", element: <><SliderSystemCoagulationPuzzle /></> }
   ];
 
   return (

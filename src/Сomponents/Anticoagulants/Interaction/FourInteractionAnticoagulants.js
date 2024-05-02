@@ -1,9 +1,7 @@
 import React from "react";
-import "./Interaction_Anticoagulants.css";
+import "./InteractionAnticoagulants.css";
 
-import { Link } from 'react-router-dom';
-
-const Five_Interaction_Anticoagulants = () => {
+const FourInteractionAnticoagulants = ({ handleContinue }) => {
   return (
     <div className="task__container">
       <div className="task__start-title">
@@ -53,14 +51,12 @@ const Five_Interaction_Anticoagulants = () => {
             </h3>
           </div>
         </div>
-      </div> 
-      <Link to="/theory">
-      <button className="task__end-title">
+      </div>
+      <button className="task__end-title" onClick={handleContinue}>
         <h2 className="task__end-title_text">Смотреть дальше</h2>
       </button>
-      </Link>
     </div>
   );
 };
 
-export default Five_Interaction_Anticoagulants;
+export default FourInteractionAnticoagulants;

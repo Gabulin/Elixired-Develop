@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-import One_Interaction_Anticoagulants from "../../Сomponents/Anticoagulants/Interaction/1_Interaction_Anticoagulants";
-import Two_Interaction_Anticoagulants from "../../Сomponents/Anticoagulants/Interaction/2_Interaction_Anticoagulants";
-import Three_Interaction_Anticoagulants from "../../Сomponents/Anticoagulants/Interaction/3_Interaction_Anticoagulants";
-import Four_Interaction_Anticoagulants from "../../Сomponents/Anticoagulants/Interaction/4_Interaction_Anticoagulants";
-
-import Five_Interaction_Anticoagulants from "../../Сomponents/Anticoagulants/Interaction/5_Interaction_Anticoagulants";
-
+import MainIndicatorsAnticoagulants from "../../Сomponents/Anticoagulants/MainIndicators/MainIndicatorsAnticoagulants";
+import TaskMainIndicatorsAnticoagulantsOne from "../../Сomponents/Anticoagulants/MainIndicators/TaskMainIndicatorsAnticoagulantsOne";
+import TaskMainIndicatorsAnticoagulantsTwo from "../../Сomponents/Anticoagulants/MainIndicators/TaskMainIndicatorsAnticoagulantsTwo";
+import TaskMainIndicatorsAnticoagulantsThree from "../../Сomponents/Anticoagulants/MainIndicators/TaskMainIndicatorsAnticoagulantsThree";
 import GoBackButton from "../../Сomponents/GoBackButton/GoBackButton";
 
-import "./Slider_Main_Indicators.css"
+import "./SlidersStyle.css"
 
-const Slider_Interactions_Ant = () => {
+const SliderMainIndicators = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
 
   const handleNextSlide = () => {
     setActiveIndex((prevIndex) =>
@@ -32,19 +28,18 @@ const Slider_Interactions_Ant = () => {
     );
   };
 
-  const components = [  
-    <One_Interaction_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Two_Interaction_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Three_Interaction_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Four_Interaction_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Five_Interaction_Anticoagulants />
+  const components = [
+    <MainIndicatorsAnticoagulants handleContinue={handleContinueSlide}/>,
+    <TaskMainIndicatorsAnticoagulantsOne handleContinue={handleContinueSlide}/>,
+    <TaskMainIndicatorsAnticoagulantsTwo handleContinue={handleContinueSlide}/>,
+    <TaskMainIndicatorsAnticoagulantsThree />
   ];
 
   return (
     <div style={{ top: 0, left: 0 }}>
       <div className="header__slider_container">
         <div className="slider_goBackButton_container">
-      <GoBackButton/>
+      <GoBackButton route="/theory"/>
       </div>
       <div className="slider__container" style={{ display: "flex", alignItems: "center", gap: "8px"}}>
         <button className="slider__button-left" onClick={handlePrevSlide}></button>
@@ -53,7 +48,7 @@ const Slider_Interactions_Ant = () => {
             <div
               key={index}
               style={{
-                width: "83px",
+                width: "140px",
                 height: "9px",
                 borderRadius: "10px",
                 margin: "0 3px",
@@ -85,4 +80,4 @@ const Slider_Interactions_Ant = () => {
   );
 };
 
-export default Slider_Interactions_Ant;
+export default SliderMainIndicators;

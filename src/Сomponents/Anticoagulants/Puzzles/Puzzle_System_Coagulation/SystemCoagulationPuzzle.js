@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
-import Typist from "react-typist";
-import "./System_coagulation_Puzzle.css";
+
+import Lottie from 'react-lottie-player';
+
+import "./SystemCoagulationPuzzle.css";
 import "./Puzzle_components.css";
 
 import TextTyper from "../../../../Utils/TextTyper";
+
+//Анимация рестарта
+import AnimationDeleteRestart from "../../../../Media/PreLoader/deleteRestartAnimation.json"
 
 // Начало импорт компонентов пазла
 import IX from "../../../../Media/Anticoagulants/Puzzle/Components/IX_component.svg";
@@ -51,7 +56,12 @@ export function Picture({ url, id }) {
   );
 }
 
-const System_coagulation_Puzzle = () => {
+const SystemCoagulationPuzzle = () => {
+  //Функция роута
+  const navigateToAnticoagulants = () => {
+    window.location.href = "/theory";
+  };
+
   // Массив перетаскиваемый элементов
   const initialDragList = [
     {
@@ -102,6 +112,19 @@ const System_coagulation_Puzzle = () => {
 
   const [dragList, setDragList] = useState(initialDragList);
   const [board, setBoard] = useState([]);
+
+  //Видимость элемента по таймеру
+  const [visibleTimerStartElement, setvisibleTimerStartElement] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setvisibleTimerStartElement(true);
+    }, 12000); 
+
+    return () => clearTimeout(timer);
+  }, []); // [] означает, что useEffect будет вызван только после монтирования компонента
+
+  //Видимость анимации
+  const [VisibleAnimDelete, setVisibleAnimDelete] = useState(false);
 
   //Видимость элементов в зависимости от перемещения
   const [VisibleElements1, setVisibleElements1] = useState(false);
@@ -171,6 +194,15 @@ const System_coagulation_Puzzle = () => {
   ));
 
   const restartGame = () => {
+
+    // Показываем элемент с анимацией
+    setVisibleAnimDelete(true)
+  
+    // Запускаем таймер для скрытия
+    setTimeout(() => {
+      setVisibleAnimDelete(false)
+    }, 3000)
+
     setDragList(initialDragList);
     setBoard([]);
     setVisibleElements1(false);
@@ -202,8 +234,60 @@ const System_coagulation_Puzzle = () => {
     });
   };
 
+  //Автоматическая прокрутка при появлении элементов
+  useEffect(() => {
+    let scrollInterval;
+
+    const startScrollInterval = (scrollAmount, intervalTime, timeoutTime) => {
+        clearInterval(scrollInterval); // Очистим предыдущий интервал перед запуском нового
+        scrollInterval = setInterval(() => {
+            const textarea = document.querySelector(".puzzle__inform-click_textarea");
+            if (textarea) {
+                textarea.scrollTop += scrollAmount;
+            }
+        }, intervalTime);
+        setTimeout(() => {
+            clearInterval(scrollInterval);
+        }, timeoutTime);
+    };
+
+    const visibleTimerStartOrElementVisible = visibleTimerStartElement || VisibleElements1 || VisibleElements2 || VisibleElements3 || VisibleElements4 ||
+        VisibleElements5 || VisibleElements6 || VisibleElements7 || VisibleElements8 || VisibleElements10;
+
+    if (visibleTimerStartOrElementVisible) {
+        if (visibleTimerStartElement) {
+            startScrollInterval(20, 5, 2000);
+        } else if (VisibleElements1 || VisibleElements2 || VisibleElements7 || VisibleElements8) {
+            startScrollInterval(5, 25, 1200);
+        } else if (VisibleElements3 || VisibleElements4 || VisibleElements5) {
+            startScrollInterval(20, 5, 5000);
+        } else if (VisibleElements6) {
+          startScrollInterval(20, 5, 6000);
+      } else if (VisibleElements10) {
+            startScrollInterval(40, 25, 7500);
+        }
+    } else {
+        clearInterval(scrollInterval);
+    }
+
+    return () => clearInterval(scrollInterval);
+}, [visibleTimerStartElement, VisibleElements1, VisibleElements2, VisibleElements3, VisibleElements4,
+    VisibleElements5, VisibleElements6, VisibleElements7, VisibleElements8, VisibleElements10]);
+
+
   return (
     <div className="puzzle__main_container">
+      {VisibleAnimDelete && (
+      <div className="puzzle__restart_popup" id="puzzleRestartPopup">
+      <Lottie
+        animationData={AnimationDeleteRestart }
+        loop={false}
+        play
+        speed={0.5}
+        style={{ width: '531x', height: '531px', margin: '45px' }} 
+      />
+      </div>
+      )}
       <h2 className="puzzle__name">СИСТЕМА КОАГУЛЯЦИИ КРОВИ: ПАЗЛ</h2>
       <div className="puzzle__component">
         <div className="puzzle__workspace">
@@ -216,71 +300,71 @@ const System_coagulation_Puzzle = () => {
               Внутренний путь<br></br>
               (Повреждение эндотелия)
             </h3>
-            <img className="fade-in back_con_2" src={arrow_left}></img>
-            <img className="fade-in back_con_3" src={PreKalikrein}></img>
+            <img className="fade-in back_con_2" src={arrow_left} alt=""></img>
+            <img className="fade-in back_con_3" src={PreKalikrein} alt=""></img>
 
             {VisibleElements1 && (
-              <img className="fade-in back_con_4" src={arrow_left}></img>
+              <img className="fade-in back_con_4" src={arrow_left} alt=""></img>
             )}
 
             {VisibleElements2 && (
               <>
-                <img className="fade-in back_con_5" src={arrow_down}></img>
-                <img className="fade-in back_con_6" src={arrow_right}></img>
-                <img className="fade-in back_con_7" src={XIIa}></img>
+                <img className="fade-in back_con_5" src={arrow_down} alt=""></img>
+                <img className="fade-in back_con_6" src={arrow_right} alt=""></img>
+                <img className="fade-in back_con_7" src={XIIa} alt=""></img>
               </>
             )}
 
             {VisibleElements3 && (
               <>
-                <img className="fade-in back_con_8" src={arrow_down}></img>
-                <img className="fade-in back_con_9" src={arrow_right}></img>
-                <img className="fade-in back_con_10" src={XIa}></img>
+                <img className="fade-in back_con_8" src={arrow_down} alt=""></img>
+                <img className="fade-in back_con_9" src={arrow_right} alt=""></img>
+                <img className="fade-in back_con_10" src={XIa} alt=""></img>
               </>
             )}
 
             {VisibleElements4 && (
               <>
-                <img className="fade-in back_con_11" src={arrow_down}></img>
-                <img className="fade-in back_con_12" src={arrow_right}></img>
-                <img className="fade-in back_con_13" src={IXa}></img>
+                <img className="fade-in back_con_11" src={arrow_down} alt=""></img>
+                <img className="fade-in back_con_12" src={arrow_right} alt=""></img>
+                <img className="fade-in back_con_13" src={IXa} alt=""></img>
               </>
             )}
 
             {VisibleElements5 && (
               <>
                 <h3 className="fade-in back_con_14">VIII, Ca</h3>
-                <img className="fade-in back_con_15" src={arrow_down}></img>
+                <img className="fade-in back_con_15" src={arrow_down} alt=""></img>
                 <img
                   className="fade-in back_con_16"
                   src={arrow_right_big}
                 ></img>
-                <img className="fade-in back_con_17" src={VIIa}></img>
-                <img className="fade-in back_con_18" src={arrow_down}></img>
+                <img className="fade-in back_con_17" src={VIIa} alt=""></img>
+                <img className="fade-in back_con_18" src={arrow_down} alt=""></img>
                 <h3 className="fade-in back_con_19">III, Ca</h3>
-                <img className="fade-in back_con_20" src={Xa}></img>
+                <img className="fade-in back_con_20" src={Xa} alt=""></img>
               </>
             )}
 
             {VisibleElements6 && (
               <>
-                <img className="fade-in back_con_21" src={arrow_down}></img>
+                <img className="fade-in back_con_21" src={arrow_down} alt=""></img>
                 <h3 className="fade-in back_con_22">V, Ca</h3>
-                <img className="fade-in back_con_23" src={ProTrombin}></img>
-                <img className="fade-in back_con_24" src={arrow_right}></img>
+                <img className="fade-in back_con_23" src={ProTrombin} alt=""></img>
+                <img className="fade-in back_con_24" src={arrow_right} alt=""></img>
               </>
             )}
 
             {VisibleElements7 && (
               <>
-                <img className="fade-in back_con_25" src={arrow_down}></img>
-                <img className="fade-in back_con_26" src={arrow_right}></img>
+                <img className="fade-in back_con_25" src={arrow_down} alt=""></img>
+                <img className="fade-in back_con_26" src={arrow_right} alt=""></img>
               </>
             )}
 
             {VisibleElements8 && (
               <>
-                <img className="fade-in back_con_27" src={arrow_tray}></img>
+                <img className="fade-in back_con_27" src={arrow_tray} alt=""></img>
               </>
             )}
 
@@ -289,8 +373,8 @@ const System_coagulation_Puzzle = () => {
                 <h3 className="fade-in back_con_28">
                   Внешний путь<br></br>(Повреждение тканей)
                 </h3>
-                <img className="fade-in back_con_29" src={arrow_left}></img>
-                <img className="fade-in back_con_30" src={arrow_left}></img>
+                <img className="fade-in back_con_29" src={arrow_left} alt=""></img>
+                <img className="fade-in back_con_30" src={arrow_left} alt=""></img>
               </>
             )}
 
@@ -368,112 +452,123 @@ const System_coagulation_Puzzle = () => {
                 <p>Внутренний путь активации:</p>
               </TextTyper>
             </div>
-            <ul className="dot_subtext">
-              <TextTyper>
+            {visibleTimerStartElement && (<ul className="dot_subtext">
                 <li>
-                  Образуется комплекс на поверхности тромбоцитарного агреганта
+                  <TextTyper>
+                Образуется комплекс на поверхности тромбоцитарного агреганта
                   из плазменного прекалликреина, ВМК (высокомолекулярного
                   кининогена и XII - го неактивного фактора).
+                  </TextTyper>
                 </li>
-              </TextTyper>
-            </ul>
+            </ul>)}
+            
 
             {VisibleElements1 && (
               <ul className="dot_subtext">
-                <TextTyper>
                   <li>
+                  <TextTyper>
                     Плазменный прекалликреин под действием ВМК превращается в
                     калликреин.
+                    </TextTyper>
                   </li>
-                </TextTyper>
               </ul>
             )}
 
             {VisibleElements2 && (
               <ul className="dot_subtext">
-                <TextTyper>
-                  <li>Калликреин активирует XII - ый фактор.</li>
-                </TextTyper>
+                  <li><TextTyper>Калликреин активирует XII - ый фактор.</TextTyper></li>
               </ul>
             )}
 
             {VisibleElements3 && (
               <ul className="dot_subtext">
-                <TextTyper>
-                  <li>
+                  <li> 
+                    <TextTyper>
                     Активный XII - ый фактор - это сериновая протеаза (молекула,
                     расщепляющая белки), он взаимодействует с XI - ым фактором
                     неактивным и отщепляет от него часть. После чего XI - ый
                     фактор становится активным.
+                    </TextTyper>
                   </li>
-                </TextTyper>
               </ul>
             )}
 
             {VisibleElements4 && (
               <ul className="dot_subtext">
-                <TextTyper>
+                
                   <li>
+                  <TextTyper>
                     XI - ый активный фактор взаимодействует с IX -ым неактивным
                     фактором и с ионами кальция, благодаря чему IX - ый фактор
                     тоже активируется.
+                    </TextTyper>
                   </li>
-                </TextTyper>
+                
               </ul>
             )}
 
             {VisibleElements5 && (
               <>
                 <ul className="dot_subtext">
-                  <TextTyper>
+                  
                     <li className="dot_subtext_point">
+                    <TextTyper>
                       IX - ый фактор взаимодействует с VIII - ым активным
                       фактором и ионами кальция, они активируют X - ый фактор.
+                      </TextTyper>
                     </li>
-                  </TextTyper>
+                  
                 </ul>
                 <ul className="dot_subtext">
-                  <TextTyper>
+                  
                     <li className="dot_subtext_point">
+                    <TextTyper>
                       Сам VIII - ый фактор активируется II - ым фактором
                       (тромбином).
+                      </TextTyper>
                     </li>
-                  </TextTyper>
+                  
                 </ul>
               </>
             )}
 
             {VisibleElements6 && (
               <ul className="dot_subtext">
-                <TextTyper>
+                
                   <li className="dot_subtext_point">
+                  <TextTyper>
                     X - ый активированный фактор взаимодействует с ионами
                     кальция и со вспомогательным V - ым фактором, который тоже
                     активируется тромбином. Таким образом, II - ой неактивный
                     фактор (протромбин) превращается в тромбин (II - ой активный
                     фактор).
+                    </TextTyper>
                   </li>
-                </TextTyper>
+                
               </ul>
             )}
 
             {VisibleElements7 && (
               <ul className="dot_subtext">
-                <TextTyper>
+                
                   <li className="dot_subtext_point">
+                  <TextTyper>
                     Тромбин преобразует фибриноген в фибрин
+                    </TextTyper>
                   </li>
-                </TextTyper>
+                
               </ul>
             )}
 
             {VisibleElements8 && (
               <ul className="dot_subtext">
-                <TextTyper>
+                
                   <li className="dot_subtext_point">
+                  <TextTyper>
                     Фибрин в дальнейшем полимеризуется и образует нити фибрина.
+                    </TextTyper>
                   </li>
-                </TextTyper>
+                
               </ul>
             )}
 
@@ -482,37 +577,41 @@ const System_coagulation_Puzzle = () => {
                 <div className="puzzle__task_sub-text">
                   <TextTyper>
                     <p>
-                      Внешний путь запускается тканевым фактором, возникающим
-                      после повреждения эндотелия сосудов или гладких мышечных
-                      клеток сосуда.
+                      Внешний путь активации:
                     </p>
                   </TextTyper>
                 </div>
                 <ul className="dot_subtext">
-                  <TextTyper>
+                  
                     <li className="dot_subtext_point">
+                    <TextTyper>
                       При повреждении эндотелия сосудов выделяется тканевой
                       фактор (III - ий фактор). Он способствует превращению VII
                       - го неактивного фактора в активный.
+                      </TextTyper>
                     </li>
-                  </TextTyper>
+                  
                 </ul>
                 <ul className="dot_subtext">
-                  <TextTyper>
+                  
                     <li className="dot_subtext_point">
+                    <TextTyper>
                       VII - ой активный фактор взаимодействует с III - им
                       фактором и ионами кальция, это способствует активации X -
                       го фактора.
+                      </TextTyper>
                     </li>
-                  </TextTyper>
+                  
                 </ul>
                 <ul className="dot_subtext">
-                  <TextTyper>
+                  
                     <li className="dot_subtext_point">
+                    <TextTyper>
                       Дальнейшая схема коагуляции соответствует внутреннего пути
                       активации.
+                      </TextTyper>
                     </li>
-                  </TextTyper>
+                  
                 </ul>
               </>
             )}
@@ -522,7 +621,9 @@ const System_coagulation_Puzzle = () => {
             <button className="puzzle__restart" onClick={restartGame}>
               Начать сначала
             </button>
-            <button className="puzzle__next">Антикоагулянты</button>
+            <button className={`puzzle__next ${VisibleElements10 ? 'puzzle__next-active' : 'puzzle__next-inactive'}`} onClick={VisibleElements10 ? navigateToAnticoagulants : undefined}>
+          Антикоагулянты
+        </button>
           </div>
         </div>
       </div>
@@ -530,4 +631,4 @@ const System_coagulation_Puzzle = () => {
   );
 };
 
-export default System_coagulation_Puzzle;
+export default SystemCoagulationPuzzle;

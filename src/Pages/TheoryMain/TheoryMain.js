@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./TheoryMain.css"; // Импорт CSS
+import "./TheoryMain.css"; 
 
 import Footer from "../Footer/Footer";
 
@@ -17,15 +17,16 @@ const TheoryMain = () => {
   const [activeButton, setActiveButton] = useState(null);
 
   const handleButtonClick = (button) => {
-    setActiveButton(button); // Устанавливаем активную кнопку при нажатии
+    setActiveButton(button); 
   };
 
   return (
     <div className="thery__flex">
       <div className="theory_main">
         <div className="goBackButton__container">
-        <GoBackButton />
+        <GoBackButton route="/"/>
         </div>
+        <div className="theory__main_stuck"></div>
         <div className="theory_main__inform">
           <img className="theory-logo" src={theoryImage} alt="Графика теории" />
           <div className="theory_main-container theory_inform-text">
@@ -59,7 +60,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 1}
                   onClick={() => handleButtonClick(1)}
-                  route="*"
+                  route="/anticoagulants/puzzles"
                 />
                 <p>Система коагуляции крови</p>
               </div>
@@ -68,7 +69,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 2}
                   onClick={() => handleButtonClick(2)}
-                  route="*"
+                  route="/anticoagulants/puzzles"
                 />
                 <p>Собрать механизм коагуляции</p>
               </div>
@@ -88,7 +89,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 3}
                   onClick={() => handleButtonClick(3)}
-                  route="*"
+                  route="/notfoundpage"
                 />
                 <p>Механизмы действия антикоагулянтов</p>
               </div>
@@ -97,7 +98,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 4}
                   onClick={() => handleButtonClick(4)}
-                  route="*"
+                  route="/notfoundpage"
                 />
                 <p>Собрать механизмы действия</p>
               </div>
@@ -217,7 +218,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 15}
                   onClick={() => handleButtonClick(15)}
-                  route="*"
+                  route="/notfoundpage"
                 />
                 <p>Основные побочные эффекты</p>
               </div>
@@ -259,7 +260,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 17}
                   onClick={() => handleButtonClick(17)}
-                  route="*"
+                  route="/notfoundpage"
                 />
                 <p>Рецептура</p>
               </div>
@@ -268,7 +269,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 18}
                   onClick={() => handleButtonClick(18)}
-                  route="*"
+                  route="/notfoundpage"
                 />
                 <p>Задачи на рецептуруи</p>
               </div>

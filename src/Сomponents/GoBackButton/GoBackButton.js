@@ -1,12 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import './GoBackButton.css'
 
-const GoBackButton = () => {
+const GoBackButton = ({ route }) => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1); 
+    navigate(route);
   };
 
   return (

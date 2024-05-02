@@ -51,7 +51,7 @@
   .slider__button-right {
       border: none;
       cursor: pointer;
-      background-color: #FFFFFF;
+      background-color: #FAFAFA;
       width: 10px; /* Установите желаемую ширину */
       height: 15px; /* Установите желаемую высоту */
   }

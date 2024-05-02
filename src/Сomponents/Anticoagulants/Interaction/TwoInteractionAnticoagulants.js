@@ -1,14 +1,14 @@
 import React from "react";
-import "./Interaction_Anticoagulants.css";
+import "./InteractionAnticoagulants.css";
 
-const Three_Interaction_Anticoagulants = ({ handleContinue }) => {
+const TwoInteractionAnticoagulants = ({ handleContinue }) => {
   return (
     <div className="task__container">
       <div className="task__start-title">
         <h2 className="task__start-title_text">Взаимодействия:</h2>
       </div>
       <h2 className="task__heading interactions__heading">
-        3) НМГ, НФГ + цефалоспорины
+      2) Гепарин натрия + ацетилсалициловая
       </h2>
       <div className="task__description_content">
         <div className="task__description_content-part">
@@ -17,8 +17,8 @@ const Three_Interaction_Anticoagulants = ({ handleContinue }) => {
               <h2 className="challenge__start-title_text">Препарат 1</h2>
             </div>
             <h3 className="interactions__text">
-              НМГ и НФГ - связываясь с антитромбином 3 ингибирует Ха фактор и
-              тромбин (только НФГ).
+            Гепарин натрия - повышает активность антитромбина 3. 
+Непрямой ингибитор фактора Ха и тромбина.
             </h3>
           </div>
         </div>
@@ -28,9 +28,7 @@ const Three_Interaction_Anticoagulants = ({ handleContinue }) => {
               <h2 className="challenge__start-title_text">Препарат 2</h2>
             </div>
             <h3 className="interactions__text">
-              Цефалоспорины - бактерицидные антибиотики, обладающие широким
-              спектром антимикробного действия, в том числе на
-              пенициллинообразующие стафилококки, энтеробактерии.{" "}
+            Ацетилсалициловая кислота - необратимое ингибирование ЦОГ-1 → ингибирование синтеза тромбоксана А2 в тромбоцитах → ингибирование агрегации тромбоцитов (антитромботический эффект).
             </h3>
           </div>
         </div>
@@ -40,12 +38,7 @@ const Three_Interaction_Anticoagulants = ({ handleContinue }) => {
               <h2 className="challenge__start-title_text">Взаимодействие</h2>
             </div>
             <h3 className="interactions__text">
-              Их взаимодействие  увеличивает вероятность кровотечения.
-              Цефтриаксон, подавляя кишечную флору, препятствует синтезу
-              витамина К.  При одновременном назначении
-              с антикоагулянтами отмечается усиление действия последних. При
-              одновременном назначении с "петлевыми" диуретиками возрастает риск
-              развития нефротоксического действия.{" "}
+            Повышается риск кровотечения вследствие нарушения функции тромбоцитов, повреждения слизистой оболочки желудочно-кишечного тракта, вытеснения антикоагулянтов (непрямых) из связи с белками плазмы крови;
             </h3>
           </div>
         </div>
@@ -57,4 +50,4 @@ const Three_Interaction_Anticoagulants = ({ handleContinue }) => {
   );
 };
 
-export default Three_Interaction_Anticoagulants;
+export default TwoInteractionAnticoagulants;

@@ -13,11 +13,11 @@ const NotFoundPage = () => {
         loop
         animationData={animationData}
         play
-        style={{ width: '640px', height: '640px' }} // настройте размеры по вашему усмотрению
+        style={{ width: '640px', height: '640px' }} 
       />
       <h1 className='notFound__text'>Страница не найдена</h1>
       <p className='notFound__subtext'>Или ещё не существует</p>
-      <Link to="/Elixired-Develop">
+      <Link to="/">
       <button className="trial-button notFoundButton">Вернуться на главную</button>
       </Link>
     </div>

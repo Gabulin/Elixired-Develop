@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import General_Contraindications_Anticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/General_Contraindications_Anticoagulants";
-import Task_One_General_Contraindications_Anticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/Task_One_General_Contraindications";
-import Task_Two_General_Contraindications_Anticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/Task_Two_General_Contraindications";
-import Task_Three_General_Contraindications_Anticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/Task_Three_General_Contraindications";
+import GeneralContraindicationsAnticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/GeneralContraindicationsAnticoagulants";
+import TaskOneGeneralContraindicationsAnticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/TaskOneGeneralContraindications";
+import TaskTwoGeneralContraindicationsAnticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/TaskTwoGeneralContraindications";
+import TaskThreeGeneralContraindicationsAnticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/TaskThreeGeneralContraindications";
 
 import GoBackButton from "../../Сomponents/GoBackButton/GoBackButton";
 
-import "./Slider_Main_Indicators.css"
+import "./SlidersStyle.css"
 
-const Slider_General_Contraindications_Ant = () => {
+const SliderGeneralContraindicationsAnt = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   
@@ -32,17 +32,17 @@ const Slider_General_Contraindications_Ant = () => {
   };
 
   const components = [
-    <General_Contraindications_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Task_One_General_Contraindications_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Task_Two_General_Contraindications_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Task_Three_General_Contraindications_Anticoagulants handleContinue={handleContinueSlide}/>
+    <GeneralContraindicationsAnticoagulants handleContinue={handleContinueSlide}/>,
+    <TaskOneGeneralContraindicationsAnticoagulants handleContinue={handleContinueSlide}/>,
+    <TaskTwoGeneralContraindicationsAnticoagulants handleContinue={handleContinueSlide}/>,
+    <TaskThreeGeneralContraindicationsAnticoagulants/>
   ];
 
   return (
     <div style={{ top: 0, left: 0 }}>
       <div className="header__slider_container">
         <div className="slider_goBackButton_container">
-      <GoBackButton/>
+      <GoBackButton route="/theory"/>
       </div>
       <div className="slider__container" style={{ display: "flex", alignItems: "center", gap: "8px"}}>
         <button className="slider__button-left" onClick={handlePrevSlide}></button>
@@ -83,4 +83,4 @@ const Slider_General_Contraindications_Ant = () => {
   );
 };
 
-export default Slider_General_Contraindications_Ant;
+export default SliderGeneralContraindicationsAnt;

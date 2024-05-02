@@ -1,12 +1,12 @@
 import React from "react";
-import "./Main_Indicators_Anticoagulants.css";
+import "./MainIndicatorsAnticoagulants.css";
 
-import leg from '../../Media/Task/Anticoagulants/1. Coagulation system/leg.svg'
-import bed from "../../Media/Task/Anticoagulants/1. Coagulation system/bed.svg";
-import blood from "../../Media/Task/Anticoagulants/1. Coagulation system/blood.svg";
-import empty from "../../Media/Task/Anticoagulants/1. Coagulation system/empty.svg";
+import leg from '../../../Media/Task/Anticoagulants/1. Coagulation system/leg.svg'
+import bed from "../../../Media/Task/Anticoagulants/1. Coagulation system/bed.svg";
+import blood from "../../../Media/Task/Anticoagulants/1. Coagulation system/blood.svg";
+import empty from "../../../Media/Task/Anticoagulants/1. Coagulation system/empty.svg";
 
-const Main_Indicators_Anticoagulants = ({ handleContinue }) => {
+const MainIndicatorsAnticoagulants = ({ handleContinue }) => {
   return (
     <div className="task__container">
       <div className="task__start-title">
@@ -28,9 +28,9 @@ const Main_Indicators_Anticoagulants = ({ handleContinue }) => {
             </ul>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={leg}></img>
-            <img className="task_image-container-picture" src={bed}></img>
-            <img className="task_image-container-picture" src={bed}></img>
+            <img className="task_image-container-picture" src={leg} alt=""></img>
+            <img className="task_image-container-picture" src={bed} alt=""></img>
+            <img className="task_image-container-picture" src={bed} alt=""></img>
           </div>
         </div>
         <div className="task__description_content-part">
@@ -40,7 +40,7 @@ const Main_Indicators_Anticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={leg}></img>
+            <img className="task_image-container-picture" src={leg} alt=""></img>
           </div>
         </div>
         <div className="task__description_content-part">
@@ -50,7 +50,7 @@ const Main_Indicators_Anticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={leg}></img>
+            <img className="task_image-container-picture" src={leg} alt=""></img>
           </div>
         </div>
       </div>
@@ -71,11 +71,11 @@ const Main_Indicators_Anticoagulants = ({ handleContinue }) => {
             </ul>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={leg}></img>
-            <img className="task_image-container-picture" src={bed}></img>
-            <img className="task_image-container-picture" src={bed}></img>
-            <img className="task_image-container-picture" src={bed}></img>
-            <img className="task_image-container-picture" src={bed}></img>
+            <img className="task_image-container-picture" src={leg} alt=""></img>
+            <img className="task_image-container-picture" src={bed} alt=""></img>
+            <img className="task_image-container-picture" src={bed} alt=""></img>
+            <img className="task_image-container-picture" src={bed} alt=""></img>
+            <img className="task_image-container-picture" src={bed} alt=""></img>
           </div>
         </div>
         </div>
@@ -84,4 +84,4 @@ const Main_Indicators_Anticoagulants = ({ handleContinue }) => {
   );
 };
 
-export default Main_Indicators_Anticoagulants;
+export default MainIndicatorsAnticoagulants;

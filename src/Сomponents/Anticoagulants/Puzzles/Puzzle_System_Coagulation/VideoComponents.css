@@ -1,0 +1,141 @@
+@import url(../Puzzle_System_Coagulation/Puzzle_components.css);
+
+/*Размеры и позиционирование*/
+.puzzle__workspace_panel .back_con_el_1,
+.puzzle__workspace_panel .back_con_el_6,
+.puzzle__workspace_panel .back_con_el_7,
+.puzzle__workspace_panel .back_con_el_8 {
+  position: absolute;
+  width: 106px;
+  height: 31px;
+}
+
+.puzzle__workspace_panel .back_con_el_2,
+.puzzle__workspace_panel .back_con_el_3,
+.puzzle__workspace_panel .back_con_el_4,
+.puzzle__workspace_panel .back_con_el_5,
+.puzzle__workspace_panel .back_con_el_10 {
+  position: absolute;
+  width: 41px;
+  height: 31px;
+}
+
+.puzzle__workspace_panel .back_con_el_9 {
+  position: absolute;
+  width: 131px;
+  height: 31px;
+}
+
+/*Расположение*/
+.puzzle__workspace_panel .back_con_el_1 {
+  top: 20px;
+  left: 35px;
+}
+
+.puzzle__workspace_panel .back_con_el_2 {
+  top: 80px;
+  left: 19px;
+}
+.puzzle__workspace_panel .back_con_el_3 {
+  top: 140px;
+  left: 70px;
+}
+
+.puzzle__workspace_panel .back_con_el_4 {
+  top: 200px;
+  left: 120px;
+}
+.puzzle__workspace_panel .back_con_el_5 {
+  top: 260px;
+  left: 165px;
+}
+
+.puzzle__workspace_panel .back_con_el_6 {
+  top: 320px;
+  left: 450px;
+}
+.puzzle__workspace_panel .back_con_el_7 {
+  top: 379px;
+  left: 366px;
+}
+
+.puzzle__workspace_panel .back_con_el_8 {
+  top: 379px;
+  left: 532px;
+}
+.puzzle__workspace_panel .back_con_el_9 {
+  top: 320px;
+  left: 635px;
+}
+
+.puzzle__workspace_panel .back_con_el_10 {
+  top: 200px;
+  left: 452px;
+}
+
+.bar {
+  text-align: center;
+}
+
+.status-bar {
+  width: 842px;
+  height: 9px;
+  background-color: #c0c0c0;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.progress {
+  position: absolute;
+  height: 100%;
+  background-color: #8f00ff;
+  transition: width 0.3s ease-in-out;
+}
+
+.bar button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.video__button_left-all {
+  background-color: #f8f8f8;
+  width: 35px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../../../Media/Anticoagulants/Video/VideoSystemCoagulation/VideoBtnLeftAll.svg");
+}
+.video__button_left {
+  background-color: #f8f8f8;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../../../Media/Anticoagulants/Video/VideoSystemCoagulation/VideoBtnLeft.svg");
+}
+
+.video__button_right {
+  background-color: #f8f8f8;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../../../Media/Anticoagulants/Video/VideoSystemCoagulation/VideoBtnRight.svg");
+}
+
+.video__button_right-all {
+  background-color: #f8f8f8;
+  width: 35px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../../../Media/Anticoagulants/Video/VideoSystemCoagulation/VideoBtnRightAll.svg");
+}

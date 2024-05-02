@@ -18,6 +18,7 @@ const FontLoader = () => {
   return null;
 };
 
+
 const MainApp = () => {
   return (
     <React.StrictMode>

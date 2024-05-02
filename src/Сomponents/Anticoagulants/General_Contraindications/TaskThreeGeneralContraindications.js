@@ -1,53 +1,20 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState} from "react";
 import ReactCardFlip from "react-card-flip";
-import "./Task_General_Contraindications_Anticoagulants.css";
+import "./TaskGeneralContraindicationsAnticoagulants.css";
+
+import useScrollDetection from "../../../Utils/UseScrollDetection";
 
 import { Link } from 'react-router-dom';
 
-const Task_Three_General_Contraindications_Anticoagulants = () => {
+const TaskThreeGeneralContraindicationsAnticoagulants = () => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const listRef = useRef(null);
-
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
 
-  useEffect(() => {
-    const handleWheelScroll = (event) => {
-      const delta = event.deltaY > 0 ? 50 : -50;
+ //Фикс ошибки скролла для компонента задачи внутри компонента слайдера, на случай, если он понадобится
+ const { listRef} = useScrollDetection();
 
-      listRef.current.scrollTop += delta;
-
-      event.preventDefault();
-    };
-
-    const list = listRef.current;
-    list.addEventListener("wheel", handleWheelScroll);
-
-    return () => {
-      list.removeEventListener("wheel", handleWheelScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const list = listRef.current;
-      const isScrollable = list.scrollHeight > list.clientHeight;
-      setIsVisible(
-        isScrollable && list.scrollTop === list.scrollHeight - list.clientHeight
-      );
-      setScrollPosition(list.scrollTop);
-    };
-
-    const list = listRef.current;
-    list.addEventListener("scroll", handleScroll);
-
-    return () => {
-      list.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="challenge__container">
@@ -122,4 +89,4 @@ const Task_Three_General_Contraindications_Anticoagulants = () => {
   );
 };
 
-export default Task_Three_General_Contraindications_Anticoagulants;
+export default TaskThreeGeneralContraindicationsAnticoagulants;

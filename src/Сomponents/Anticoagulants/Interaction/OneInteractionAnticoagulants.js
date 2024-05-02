@@ -1,7 +1,7 @@
 import React from "react";
-import "./Interaction_Anticoagulants.css";
+import "./InteractionAnticoagulants.css";
 
-const One_Interaction_Anticoagulants = ({ handleContinue }) => {
+const OneInteractionAnticoagulants = ({ handleContinue }) => {
   return (
     <div className="task__container">
       <div className="task__start-title">
@@ -54,4 +54,4 @@ const One_Interaction_Anticoagulants = ({ handleContinue }) => {
   );
 };
 
-export default One_Interaction_Anticoagulants;
+export default OneInteractionAnticoagulants;

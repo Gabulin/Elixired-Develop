@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 // Создаем глобальную очередь
 const queue = [];
 
-export default function TextTyper({ delay = 0, interval = 50, Markup = "span", children }) {
+export default function TextTyper({ delay = 0, interval = 20, Markup = "span", children }) {
   const [typedText, setTypedText] = useState("");
   const idRef = React.useRef(null); // Ссылка на уникальный идентификатор
 

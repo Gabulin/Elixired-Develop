@@ -6,12 +6,11 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className="header">
-       <Link to="/Elixired-Develop">
+       <Link to="/">
         <div className="header_logo">
         <img src={header_logo} alt="Logo"></img>
         </div>
       </Link>
-      {/* Дополнительная навигация или элементы, если необходимо */}
     </header>
   );
 };

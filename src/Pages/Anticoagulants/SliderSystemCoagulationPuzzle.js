@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Main_Indicators_Anticoagulants from "../../Сomponents/Anticoagulants/Main_Indicators_Anticoagulants";
-import Task_Main_Indicators_Anticoagulants_One from "../../Сomponents/Anticoagulants/Task_Main_Indicators_Anticoagulants_One";
-import Task_Main_Indicators_Anticoagulants_Two from "../../Сomponents/Anticoagulants/Task_Main_Indicators_Anticoagulants_Two";
-import Task_Main_Indicators_Anticoagulants_Three from "../../Сomponents/Anticoagulants/Task_Main_Indicators_Anticoagulants_Three";
+import SystemCoagulationPuzzle from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationPuzzle";
+import SystemCoagulationVideo from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationVideo";
 
 import GoBackButton from "../../Сomponents/GoBackButton/GoBackButton";
 
-import "./Slider_Main_Indicators.css"
+import "./SlidersStyle.css"
 
-const AnticoagulantsSliderMainIndicators = () => {
+const SliderSystemCoagulationPuzzle = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  
 
   const handleNextSlide = () => {
     setActiveIndex((prevIndex) =>
@@ -30,17 +30,15 @@ const AnticoagulantsSliderMainIndicators = () => {
   };
 
   const components = [
-    <Main_Indicators_Anticoagulants handleContinue={handleContinueSlide}/>,
-    <Task_Main_Indicators_Anticoagulants_One handleContinue={handleContinueSlide}/>,
-    <Task_Main_Indicators_Anticoagulants_Two handleContinue={handleContinueSlide}/>,
-    <Task_Main_Indicators_Anticoagulants_Three />
+    <SystemCoagulationVideo handleContinue={handleContinueSlide}/>,
+    <SystemCoagulationPuzzle/>
   ];
 
   return (
     <div style={{ top: 0, left: 0 }}>
       <div className="header__slider_container">
         <div className="slider_goBackButton_container">
-      <GoBackButton/>
+      <GoBackButton route="/theory"/>
       </div>
       <div className="slider__container" style={{ display: "flex", alignItems: "center", gap: "8px"}}>
         <button className="slider__button-left" onClick={handlePrevSlide}></button>
@@ -49,7 +47,7 @@ const AnticoagulantsSliderMainIndicators = () => {
             <div
               key={index}
               style={{
-                width: "140px",
+                width: "290px",
                 height: "9px",
                 borderRadius: "10px",
                 margin: "0 3px",
@@ -81,4 +79,4 @@ const AnticoagulantsSliderMainIndicators = () => {
   );
 };
 
-export default AnticoagulantsSliderMainIndicators;
+export default SliderSystemCoagulationPuzzle;

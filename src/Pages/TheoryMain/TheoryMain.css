@@ -21,14 +21,23 @@
   .theory_main__interact {
     margin-top: 90px;
   }
+
+  .theory__main_stuck {
+    width: 488px;
+    height: 342px;
+    margin-top: 55px;
+    margin-left: 100px;
+    visibility: hidden;
+  }
   
   .theory_main__inform {
+    position: fixed;
     width: 488px;
     height: 342px;
     border-radius: 10px;
     border: 2px solid #DBDBDB;
     margin-top: 55px;
-    margin-left: 100px
+    margin-left: 150px
   }
   
   .theory_main__inform h1 {
