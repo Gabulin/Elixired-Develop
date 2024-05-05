@@ -69,6 +69,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 2}
                   onClick={() => handleButtonClick(2)}
+                  activeIndex={1}
                   route="/anticoagulants/puzzles"
                 />
                 <p>Собрать механизм коагуляции</p>
@@ -129,6 +130,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 8}
                   onClick={() => handleButtonClick(8)}
+                  activeIndex={1}
                   route="/anticoagulants/main_Indicators"
                 />
                 <p>Показания: Задача №1</p>
@@ -138,6 +140,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 9}
                   onClick={() => handleButtonClick(9)}
+                  activeIndex={2}
                   route="/anticoagulants/main_Indicators"
                 />
                 <p>Показания: Задача №2</p>
@@ -147,6 +150,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 10}
                   onClick={() => handleButtonClick(10)}
+                  activeIndex={3}
                   route="/anticoagulants/main_Indicators"
                 />
                 <p>Показания: Задача №3</p>
@@ -178,6 +182,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 12}
                   onClick={() => handleButtonClick(12)}
+                  activeIndex={1}
                   route="/anticoagulants/general_contraindications"
                 />
                 <p>Противопоказания: Задача №1</p>
@@ -187,6 +192,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 13}
                   onClick={() => handleButtonClick(13)}
+                  activeIndex={2}
                   route="/anticoagulants/general_contraindications"
                 />
                 <p>Противопоказания: Задача №2</p>
@@ -196,6 +202,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 14}
                   onClick={() => handleButtonClick(14)}
+                  activeIndex={3}
                   route="/anticoagulants/general_contraindications"
                 />
                 <p>Противопоказания: Задача №3</p>

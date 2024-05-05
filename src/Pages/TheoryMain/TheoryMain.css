@@ -7,9 +7,11 @@
 .theory_main {
     display: flex;
     margin-bottom: 120px;
+    gap: 50px;
   }
 
   .goBackButton__container {
+    position: fixed;
     margin-top: 57px;
   }
   
@@ -74,13 +76,13 @@
   .button_container {
     display: flex;
     align-items: center;
-    gap: 16px; /* Настройте зазор по мере необходимости */
+    gap: 16px; 
     margin-left: 100px;
   }
   
   .button_container p {
     font-family: Arial, sans-serif;
-    font-size: 18px; /* Настройте по мере необходимости */
+    font-size: 18px; 
   }
 
   .theory_main__interact-text {

@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
-import SystemCoagulationPuzzle from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationPuzzle";
-import SystemCoagulationVideo from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationVideo";
+import PropTypes from "prop-types";
 
 import GoBackButton from "../../Сomponents/GoBackButton/GoBackButton";
 
 import "./SlidersStyle.css"
 
-const SliderSystemCoagulationPuzzle = () => {
+const SliderComponents = ({ components, width, height }) => {
   const location = useLocation();
   const [activeIndex, setActiveIndex] = useState(0);
-  
+
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const indexParam = searchParams.get("activeIndex");
@@ -31,12 +29,6 @@ const SliderSystemCoagulationPuzzle = () => {
       prevIndex === 0 ? components.length - 1 : prevIndex - 1
     );
   };
-  
-
-  const components = [
-    <SystemCoagulationVideo handleContinue={handleNextSlide} />,
-    <SystemCoagulationPuzzle />
-  ];
 
   return (
     <div style={{ top: 0, left: 0 }}>
@@ -44,15 +36,18 @@ const SliderSystemCoagulationPuzzle = () => {
         <div className="slider_goBackButton_container">
           <GoBackButton route="/theory" />
         </div>
-        <div className="slider__container" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <div
+          className="slider__container"
+          style={{ display: "flex", alignItems: "center", gap: "8px" }}
+        >
           <button className="slider__button-left" onClick={handlePrevSlide}></button>
           <div style={{ display: "flex" }}>
             {components.map((_, index) => (
               <div
                 key={index}
                 style={{
-                  width: "290px",
-                  height: "9px",
+                  width: width,
+                  height: height,
                   borderRadius: "10px",
                   margin: "0 3px",
                   backgroundColor:
@@ -83,4 +78,10 @@ const SliderSystemCoagulationPuzzle = () => {
   );
 };
 
-export default SliderSystemCoagulationPuzzle;
+SliderComponents.propTypes = {
+  components: PropTypes.array.isRequired,
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+};
+
+export default SliderComponents;

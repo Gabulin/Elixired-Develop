@@ -35,10 +35,88 @@ import arrow_right from "../../../../Media/Anticoagulants/Puzzle/BackGround_comp
 import arrow_down from "../../../../Media/Anticoagulants/Puzzle/BackGround_componets/arrows/puzzle_arrow_down.svg";
 import arrow_right_big from "../../../../Media/Anticoagulants/Puzzle/BackGround_componets/arrows/puzzle_arrow_right_big.svg";
 import arrow_tray from "../../../../Media/Anticoagulants/Puzzle/BackGround_componets/arrows/puzzle_arrow_tray.svg";
+const BackConnections = ({ progress }) => {
+  const connections = [
+    { step: 10, elements: [
+      <h3 key="step1" className="fade-in back_con_1">Внутренний путь<br/> (Повреждение эндотелия)</h3>,
+      <img key="step2" className="fade-in back_con_2" src={arrow_left} alt="" />,
+      <img key="step3" className="fade-in back_con_3" src={PreKalikrein} alt="" />
+    ] },
+    { step: 20, elements: [
+      <img key="step4" className="fade-in back_con_el_1" src={KALIKREIN} alt="" />,
+      <img key="step5" className="fade-in back_con_4" src={arrow_left} alt="" />
+    ] },
+    { step: 30, elements: [
+      <img key="step6" className="fade-in back_con_el_2" src={XII} alt="" />,
+      <img key="step7" className="fade-in back_con_5" src={arrow_down} alt="" />,
+      <img key="step8" className="fade-in back_con_6" src={arrow_right} alt="" />,
+      <img key="step9" className="fade-in back_con_7" src={XIIa} alt="" />
+    ] },
+    { step: 40, elements: [
+      <img key="step10" className="fade-in back_con_el_3" src={XI} alt="" />,
+      <img key="step11" className="fade-in back_con_8" src={arrow_down} alt="" />,
+      <img key="step12" className="fade-in back_con_9" src={arrow_right} alt="" />,
+      <img key="step13" className="fade-in back_con_10" src={XIa} alt="" />
+    ] },
+    { step: 50, elements: [
+      <img key="step14" className="fade-in back_con_el_4" src={IX} alt="" />,
+      <img key="step15" className="fade-in back_con_11" src={arrow_down} alt="" />,
+      <img key="step16" className="fade-in back_con_12" src={arrow_right} alt="" />,
+      <img key="step17" className="fade-in back_con_13" src={IXa} alt="" />
+    ] },
+    { step: 60, elements: [
+      <img key="step18" className="fade-in back_con_el_5" src={X} alt="" />,
+      <h3 key="step19" className="fade-in back_con_14">VIII, Ca</h3>,
+      <img key="step20" className="fade-in back_con_15" src={arrow_down} alt="" />,
+      <img key="step21" className="fade-in back_con_16" src={arrow_right_big} alt="" />,
+      <img key="step22" className="fade-in back_con_17" src={VIIa} alt="" />,
+      <img key="step23" className="fade-in back_con_18" src={arrow_down} alt="" />,
+      <h3 key="step24" className="fade-in back_con_19">III, Ca</h3>,
+      <img key="step25" className="fade-in back_con_20" src={Xa} alt="" />
+    ] },
+    { step: 70, elements: [
+      <img key="step26" className="fade-in back_con_el_6" src={Trombin} alt="" />,
+      <img key="step27" className="fade-in back_con_21" src={arrow_down} alt="" />,
+      <h3 key="step28" className="fade-in back_con_22">V, Ca</h3>,
+      <img key="step29" className="fade-in back_con_23" src={ProTrombin} alt="" />,
+      <img key="step30" className="fade-in back_con_24" src={arrow_right} alt="" />
+    ] },
+    { step: 80, elements: [
+      <img key="step31" className="fade-in back_con_el_7" src={Fibrinogen} alt="" />,
+      <img key="step32" className="fade-in back_con_el_8" src={Fibrin} alt="" />,
+      <img key="step33" className="fade-in back_con_25" src={arrow_down} alt="" />,
+      <img key="step34" className="fade-in back_con_26" src={arrow_right} alt="" />
+    ] },
+    { step: 90, elements: [
+      <img key="step35" className="fade-in back_con_el_9" src={NitiFibrina} alt="" />,
+      <img key="step36" className="fade-in back_con_27" src={arrow_tray} alt="" />
+    ] },
+    { step: 100, elements: [
+      <img key="step37" className="fade-in back_con_el_10" src={VII} alt="" />,
+      <h3 key="step38" className="fade-in back_con_28">Внешний путь<br/> (Повреждение тканей)</h3>,
+      <img key="step39" className="fade-in back_con_29" src={arrow_left} alt="" />,
+      <img key="step40" className="fade-in back_con_30" src={arrow_left} alt="" />
+    ] }
+  ];
 
-const SystemCoagulationVideo = ({ handleContinue }) => {
+  return (
+    <>
+      {connections.map((connection, index) => {
+        if (progress >= connection.step) {
+          return connection.elements.map((element, idx) => (
+            <div key={`element-${index}-${idx}`}>{element}</div>
+          ));
+        }
+        return null;
+      })}
+    </>
+  );
+};
+
+const SystemCoagulationVideoTEST = ({ handleContinue }) => {
 
   const [progress, setProgress] = useState(0);
+
 
   const handleRightClick = () => {
     setProgress(prevProgress => Math.min(prevProgress + 10, 100));
@@ -63,155 +141,7 @@ const SystemCoagulationVideo = ({ handleContinue }) => {
         <div className="puzzle__workspace">
           
           <div className="puzzle__workspace_panel">
-          {progress >= 10 && (
-            <>
-              <h3 className="fade-in back_con_1">
-                Внутренний путь<br></br>
-                (Повреждение эндотелия)
-              </h3>
-              <img className="fade-in back_con_2" src={arrow_left} alt=""></img>
-              <img
-                className="fade-in back_con_3"
-                src={PreKalikrein}
-                alt=""
-              ></img>
-            </>
-          )}
-          {progress >= 20 && (
-            <>
-              <img
-                className="fade-in back_con_el_1"
-                src={KALIKREIN}
-                alt=""
-              ></img>
-              <img className="fade-in back_con_4" src={arrow_left} alt=""></img>
-            </>
-          )}
-          {progress >= 30 && (
-            <>
-            <img className="fade-in back_con_el_2" src={XII} alt=""></img>
-              <img className="fade-in back_con_5" src={arrow_down} alt=""></img>
-              <img
-                className="fade-in back_con_6"
-                src={arrow_right}
-                alt=""
-              ></img>
-              <img className="fade-in back_con_7" src={XIIa} alt=""></img>
-            </>
-          )}
-          {progress >= 40 && (
-            <>
-            <img className="fade-in back_con_el_3" src={XI} alt=""></img>
-              <img className="fade-in back_con_8" src={arrow_down} alt=""></img>
-              <img
-                className="fade-in back_con_9"
-                src={arrow_right}
-                alt=""
-              ></img>
-              <img className="fade-in back_con_10" src={XIa} alt=""></img>
-            </>
-          )}
-          {progress >= 50 && (
-            <>
-            <img className="fade-in back_con_el_4" src={IX} alt=""></img>
-              <img
-                className="fade-in back_con_11"
-                src={arrow_down}
-                alt=""
-              ></img>
-              <img
-                className="fade-in back_con_12"
-                src={arrow_right}
-                alt=""
-              ></img>
-              <img className="fade-in back_con_13" src={IXa} alt=""></img>
-            </>
-          )}
-          {progress >= 60 && (
-            <>
-            <img className="fade-in back_con_el_5" src={X} alt=""></img>
-              <h3 className="fade-in back_con_14">VIII, Ca</h3>
-              <img
-                className="fade-in back_con_15"
-                src={arrow_down}
-                alt=""
-              ></img>
-              <img className="fade-in back_con_16" src={arrow_right_big}></img>
-              <img className="fade-in back_con_17" src={VIIa} alt=""></img>
-              <img
-                className="fade-in back_con_18"
-                src={arrow_down}
-                alt=""
-              ></img>
-              <h3 className="fade-in back_con_19">III, Ca</h3>
-              <img className="fade-in back_con_20" src={Xa} alt=""></img>
-            </>
-          )}
-          {progress >= 70 && (
-            <>
-            <img className="fade-in back_con_el_6" src={Trombin} alt=""></img>
-              <img
-                className="fade-in back_con_21"
-                src={arrow_down}
-                alt=""
-              ></img>
-              <h3 className="fade-in back_con_22">V, Ca</h3>
-              <img
-                className="fade-in back_con_23"
-                src={ProTrombin}
-                alt=""
-              ></img>
-              <img
-                className="fade-in back_con_24"
-                src={arrow_right}
-                alt=""
-              ></img>
-            </>
-          )}
-          {progress >= 80 && (
-            <>
-            <img className="fade-in back_con_el_7" src={Fibrinogen} alt=""></img>
-            <img className="fade-in back_con_el_8" src={Fibrin} alt=""></img>
-              <img
-                className="fade-in back_con_25"
-                src={arrow_down}
-                alt=""
-              ></img>
-              <img
-                className="fade-in back_con_26"
-                src={arrow_right}
-                alt=""
-              ></img>
-            </>
-          )}
-          {progress >= 90 && (
-            <>
-            <img className="fade-in back_con_el_9" src={NitiFibrina} alt=""></img>
-              <img
-                className="fade-in back_con_27"
-                src={arrow_tray}
-                alt=""
-              ></img>
-            </>
-          )}
-          {progress >= 100 && (
-            <>
-            <img className="fade-in back_con_el_10" src={VII} alt=""></img>
-              <h3 className="fade-in back_con_28">
-                Внешний путь<br></br>(Повреждение тканей)
-              </h3>
-              <img
-                className="fade-in back_con_29"
-                src={arrow_left}
-                alt=""
-              ></img>
-              <img
-                className="fade-in back_con_30"
-                src={arrow_left}
-                alt=""
-              ></img>
-            </>
-          )}
+          <BackConnections progress={progress} />
           </div>
           <div className="bar">
           <div className="status-bar">
@@ -439,4 +369,4 @@ const SystemCoagulationVideo = ({ handleContinue }) => {
   );
 };
 
-export default SystemCoagulationVideo;
+export default SystemCoagulationVideoTEST;

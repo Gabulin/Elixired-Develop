@@ -399,20 +399,20 @@ const SystemCoagulationPuzzle = () => {
         <div className="puzzle__inform-click">
           <div className="puzzle__inform-click_textarea">
             <div className="puzzle__task_main-text">
-              <TextTyper order={0}>
+              <TextTyper>
                 <h3>ЗАДАНИЕ № 1</h3>
               </TextTyper>
             </div>
 
             <div className="puzzle__task_sub-text">
-              <TextTyper order={1}>
+              <TextTyper order>
                 <p>
                   Переместите на экран факторы свёртывания в правильном порядке,
                   чтобы собрать схему коагуляции крови. <br></br>
                 </p>
               </TextTyper>
               <div>
-                <TextTyper order={2}>
+                <TextTyper order>
                   <p>[НАЧИНАТЬ СБОРКУ С ВНУТРЕННЕГО ПУТИ]</p>
                 </TextTyper>
               </div>

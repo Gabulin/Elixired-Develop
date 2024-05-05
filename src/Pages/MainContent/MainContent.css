@@ -26,6 +26,7 @@
 
 .trial-button {
   background-color: #8F00FF;
+  transition: background-color 0.3s ease;
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -36,6 +37,10 @@
   height: 59px;
 }
 
+.trial-button:hover {
+  background-color: #8049AD;
+}
+
 .main-content_media__img {
   width: 340x;
   height: 340px;
@@ -43,4 +48,8 @@
 
 .main-content_text-container {
   max-width: 503px;
+}
+
+.goBackButton__container {
+  position: fixed;
 }

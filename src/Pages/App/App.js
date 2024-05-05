@@ -26,20 +26,19 @@ import SliderSystemCoagulationPuzzle from "../Anticoagulants/SliderSystemCoagula
 // Тест пазла
 import SystemCoagulationPuzzle from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationPuzzle";
 // Тест видео
-import SystemCoagulationVideo from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationVideo";
-
+import SystemCoagulationVideoTEST from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationVideoTEST";
 
 const App = () => {
   // Массив с данными о роутах
   const routes = [
     { path: "", element: <><Header/><MainContent /><Footer /></> },
     { path: "/theory", element: <><Header /><TheoryMain /><Footer /></> },
-    { path: "/anticoagulants/main_Indicators", element: <><Header /><SliderMainIndicators /><Footer /></> },
-    { path: "/anticoagulants/general_contraindications", element: <><Header /><SliderGeneralContraindicationsAnt /><Footer /></> },
-    { path: "/anticoagulants/interactions", element: <><Header /><SliderInteractionsAnt /><Footer /></> },
+    { path: "/anticoagulants/main_Indicators", element: <><SliderMainIndicators /><Footer /></> },
+    { path: "/anticoagulants/general_contraindications", element: <><SliderGeneralContraindicationsAnt /><Footer /></> },
+    { path: "/anticoagulants/interactions", element: <><SliderInteractionsAnt /><Footer /></> },
     { path: "*", element: <><NotFoundPage /></> },
     { path: "/notfoundpage", element: <><NotFoundPage /></> },
-    { path: "/anticoagulants/puzzles", element: <><SliderSystemCoagulationPuzzle /></> }
+    { path: "/anticoagulants/puzzles", element: <><SliderSystemCoagulationPuzzle /><Footer /></> }
   ];
 
   return (

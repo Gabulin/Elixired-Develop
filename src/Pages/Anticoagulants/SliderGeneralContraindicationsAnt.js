@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import GeneralContraindicationsAnticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/GeneralContraindicationsAnticoagulants";
 import TaskOneGeneralContraindicationsAnticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/TaskOneGeneralContraindications";
 import TaskTwoGeneralContraindicationsAnticoagulants from "../../Сomponents/Anticoagulants/General_Contraindications/TaskTwoGeneralContraindications";
@@ -9,7 +10,16 @@ import GoBackButton from "../../Сomponents/GoBackButton/GoBackButton";
 import "./SlidersStyle.css"
 
 const SliderGeneralContraindicationsAnt = () => {
+  const location = useLocation();
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const indexParam = searchParams.get("activeIndex");
+    if (indexParam !== null) {
+      setActiveIndex(parseInt(indexParam));
+    }
+  }, [location.search]);
 
   
 
@@ -29,6 +39,10 @@ const SliderGeneralContraindicationsAnt = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === components.length - 1 ? 0 : prevIndex + 1
     );
+  };
+
+  const handleSetSlideIndex = (index) => {
+    setActiveIndex(index);
   };
 
   const components = [

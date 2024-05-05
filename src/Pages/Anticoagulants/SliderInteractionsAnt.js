@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import OneInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Interaction/OneInteractionAnticoagulants";
 import TwoInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Interaction/TwoInteractionAnticoagulants";
 import ThreeInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Interaction/ThreeInteractionAnticoagulants";
@@ -9,7 +10,16 @@ import GoBackButton from "../../Сomponents/GoBackButton/GoBackButton";
 import "./SlidersStyle.css"
 
 const SliderInteractionsAnt = () => {
+  const location = useLocation();
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const indexParam = searchParams.get("activeIndex");
+    if (indexParam !== null) {
+      setActiveIndex(parseInt(indexParam));
+    }
+  }, [location.search]);
 
 
   const handleNextSlide = () => {
@@ -28,6 +38,10 @@ const SliderInteractionsAnt = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === components.length - 1 ? 0 : prevIndex + 1
     );
+  };
+
+  const handleSetSlideIndex = (index) => {
+    setActiveIndex(index);
   };
 
   const components = [  

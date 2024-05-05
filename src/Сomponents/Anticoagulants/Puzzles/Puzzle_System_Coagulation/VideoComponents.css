@@ -136,6 +136,6 @@
   background-repeat: no-repeat;
   background-position: center center;
   border: none;
-  cursor: pointer;
+  opacity: 50%;
   background-image: url("../../../../Media/Anticoagulants/Video/VideoSystemCoagulation/VideoBtnRightAll.svg");
 }

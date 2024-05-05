@@ -5,18 +5,9 @@ import pressedImage from "../../Media/TheoryMain/buttonPressed.svg";
 import popupButton from "../../Media/TheoryMain/popupButton.svg";
 import popupButtonHover from '../../Media/TheoryMain/popupButtonHover.svg'
 
-const ImageButton = ({ buttonText, onClick, isOpen, route }) => {
+const ImageButton = ({ buttonText, onClick, isOpen, route, activeIndex = 0 }) => {
   const [image, setImage] = useState(defaultImage);
-  const [isHovered, setIsHovered] = useState(false);
   const [isPopupHovered, setIsPopupHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   const handlePopupMouseEnter = () => {
     setIsPopupHovered(true);
@@ -34,7 +25,7 @@ const ImageButton = ({ buttonText, onClick, isOpen, route }) => {
 
   const handlePopupClick = () => {
     if (route) {
-      window.location.href = route; // Используем window.location для перехода по ссылке
+      window.location.href = `${route}?activeIndex=${activeIndex}`;
     }
   };
 
@@ -44,7 +35,7 @@ const ImageButton = ({ buttonText, onClick, isOpen, route }) => {
         <div className="popup_container">
           <svg
             className="popup-svg"
-            onClick={handlePopupClick} // Используем handlePopupClick при клике на всплывающий SVG элемент
+            onClick={handlePopupClick} 
             onMouseEnter={handlePopupMouseEnter}
             onMouseLeave={handlePopupMouseLeave}
           >
