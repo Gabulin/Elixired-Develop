@@ -1,0 +1,27 @@
+@import url(../Video.css);
+@import url(../Puzzle.css);
+
+.back_step {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.explanation__button_cont {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.explanation__button {
+    background: none;
+    border: none;
+    font-family: Inter;
+    font-size: 14;
+    color: #8F00FF;
+    cursor: pointer;
+}

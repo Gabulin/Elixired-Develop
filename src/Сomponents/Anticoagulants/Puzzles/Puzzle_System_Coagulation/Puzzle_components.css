@@ -1,7 +1,3 @@
-.puzzle__workspace_panel .picture {
-    position: absolute;
-    transition: top 0.5s ease, left 0.5s ease;
-  }
 
 /*Размеры */
   .puzzle__workspace_panel .picture-1,

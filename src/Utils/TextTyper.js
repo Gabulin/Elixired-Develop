@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Создаем глобальную очередь
 const queue = [];
 
 export default function TextTyper({ delay = 0, interval = 20, Markup = "span", children }) {
   const [typedText, setTypedText] = useState("");
-  const idRef = React.useRef(null); // Ссылка на уникальный идентификатор
+  const idRef = useRef(null); // Ссылка на уникальный идентификатор
 
   useEffect(() => {
     // Создаем уникальный идентификатор
@@ -16,8 +16,8 @@ export default function TextTyper({ delay = 0, interval = 20, Markup = "span", c
 
     // Функция для запуска анимации
     const startAnimation = () => {
-      const text = getTextContent(children);
-      typingRender(text, setTypedText, interval);
+      const { text, boldWords } = getTextContent(children);
+      typingRender(text, setTypedText, interval, boldWords);
     };
 
     // Экспортируем функцию для возможности вызова извне
@@ -40,29 +40,52 @@ export default function TextTyper({ delay = 0, interval = 20, Markup = "span", c
   }, []); // Пустой массив зависимостей, чтобы выполнять эффект только один раз
 
   const getTextContent = (children) => {
-    if (typeof children === 'string') {
-      return children.trim();
-    }
-    if (Array.isArray(children)) {
-      return children.map(child => getTextContent(child)).join('');
-    }
-    if (typeof children === 'object' && children.props && children.props.children) {
-      return getTextContent(children.props.children);
-    }
-    return '';
+    let formattedText = '';
+    let boldWords = [];
+
+    const traverseChildren = (child, index) => {
+      if (typeof child === 'string') {
+        formattedText += child;
+      } else if (Array.isArray(child)) {
+        child.forEach((subChild, i) => traverseChildren(subChild, `${index}-${i}`));
+      } else if (typeof child === 'object' && child.props && child.props.children) {
+        traverseChildren(child.props.children, index);
+      }
+
+      if (child.props && child.props.bold) {
+        boldWords.push(child.props.children);
+      }
+    };
+
+    traverseChildren(children, '0');
+
+    return { text: formattedText, boldWords };
   };
 
-  const typingRender = (text, updater, interval) => {
+  const typingRender = (text, updater, interval, boldWords) => {
     let localTypingIndex = 0;
     let localTyping = "";
     if (text) {
       let printer = setInterval(() => {
         if (localTypingIndex < text.length) {
-          updater((localTyping += text[localTypingIndex]));
-          localTypingIndex += 1;
+          let isBold = false;
+          boldWords.forEach((word) => {
+            const wordLength = word.length;
+            const slice = text.slice(localTypingIndex, localTypingIndex + wordLength);
+            if (slice === word) {
+              localTyping += `<strong>${slice}</strong>`;
+              localTypingIndex += wordLength;
+              isBold = true;
+            }
+          });
+
+          if (!isBold) {
+            localTyping += text[localTypingIndex];
+            localTypingIndex++;
+          }
+
+          updater(localTyping);
         } else {
-          localTypingIndex = 0;
-          localTyping = "";
           clearInterval(printer);
 
           // Удаляем себя из очереди

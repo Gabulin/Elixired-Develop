@@ -23,10 +23,10 @@ import SliderGeneralContraindicationsAnt from "../Anticoagulants/SliderGeneralCo
 import SliderInteractionsAnt from "../Anticoagulants/SliderInteractionsAnt";
 //
 import SliderSystemCoagulationPuzzle from "../Anticoagulants/SliderSystemCoagulationPuzzle";
-// Тест пазла
-import SystemCoagulationPuzzle from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationPuzzle";
 // Тест видео
 import SystemCoagulationVideoTEST from "../../Сomponents/Anticoagulants/Puzzles/Puzzle_System_Coagulation/SystemCoagulationVideoTEST";
+// Механизмы действия
+import SliderMechAnt from "../Anticoagulants/SliderMechAnt";
 
 const App = () => {
   // Массив с данными о роутах
@@ -38,7 +38,8 @@ const App = () => {
     { path: "/anticoagulants/interactions", element: <><SliderInteractionsAnt /><Footer /></> },
     { path: "*", element: <><NotFoundPage /></> },
     { path: "/notfoundpage", element: <><NotFoundPage /></> },
-    { path: "/anticoagulants/puzzles", element: <><SliderSystemCoagulationPuzzle /><Footer /></> }
+    { path: "/anticoagulants/puzzles", element: <><SliderSystemCoagulationPuzzle /><Footer /></> },
+    { path: "/anticoagulants/mechanism", element: <><SliderMechAnt /><Footer /></> }
   ];
 
   return (

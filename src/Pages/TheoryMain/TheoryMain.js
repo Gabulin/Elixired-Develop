@@ -90,18 +90,29 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 3}
                   onClick={() => handleButtonClick(3)}
-                  route="/notfoundpage"
+                  route="/anticoagulants/mechanism"
                 />
-                <p>Механизмы действия антикоагулянтов</p>
+                <p>Механизмы действия антикоагулянтов прямого действия</p>
               </div>
               <div className="button_container">
                 <ImageButton
                   buttonText="Начать"
                   isOpen={activeButton === 4}
                   onClick={() => handleButtonClick(4)}
-                  route="/notfoundpage"
+                  route="/anticoagulants/mechanism"
+                  activeIndex={1}
                 />
-                <p>Собрать механизмы действия</p>
+                <p>Механизмы действия антикоагулянтов непрямого действия</p>
+              </div>
+              <div className="button_container">
+                <ImageButton
+                  buttonText="Начать"
+                  isOpen={activeButton === 19}
+                  onClick={() => handleButtonClick(19)}
+                  route="/anticoagulants/mechanism"
+                  activeIndex={2}
+                />
+                <p>Пазл антигоагулянтов непрямого действия</p>
               </div>
             </div>
           </div>
@@ -255,30 +266,20 @@ const TheoryMain = () => {
           </div>
           <div className="theory_main__interact">
             <div className="theory_main-container">
-            <div className="theme__container">
+            <div className="theme__container" style={{ opacity: "50%" }}>
                 <img src={ThemeBumber1} alt="Тема 7" className="theme__image" />
                 <div className="theme__number">7</div>
               </div>
-              <h2 className="theory_main__interact-text">Рецептура</h2>
+              <h2 className="theory_main__interact-text" style={{ opacity: "50%" }}>Рецептура</h2>
             </div>
             <div className="interact_buttons">
               <div className="button_container">
-                <ImageButton
-                  buttonText="Начать"
-                  isOpen={activeButton === 17}
-                  onClick={() => handleButtonClick(17)}
-                  route="/notfoundpage"
-                />
-                <p>Рецептура</p>
+              <img src={buttonBlocked} style={{ opacity: "50%" }}></img>
+                <p style={{ opacity: "50%" }}>Рецептура</p>
               </div>
               <div className="button_container">
-                <ImageButton
-                  buttonText="Начать"
-                  isOpen={activeButton === 18}
-                  onClick={() => handleButtonClick(18)}
-                  route="/notfoundpage"
-                />
-                <p>Задачи на рецептуруи</p>
+                <img src={buttonBlocked} style={{ opacity: "50%" }}></img>
+                <p style={{ opacity: "50%" }}>Задачи на рецептуру</p>
               </div>
             </div>
           </div>
