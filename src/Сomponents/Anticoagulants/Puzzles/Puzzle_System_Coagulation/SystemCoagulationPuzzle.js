@@ -1,19 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
-
+//Анимация
 import Lottie from 'react-lottie-player';
-
+//Стили
 import "./SystemCoagulationPuzzle.css";
 import "./Puzzle_components.css";
-
+//Утилиты
 import TextTyper from "../../../../Utils/TextTyper";
 
 //Анимация рестарта
 import AnimationDeleteRestart from "../../../../Media/PreLoader/deleteRestartAnimation.json"
 
-//Импорт компонентов ра
-import { IX, NitiFibrina, X, V, Trombin, XI, Fibrinogen, VII, Fibrin, XII, KALIKREIN,
-  PreKalikrein, XIIa, XIa, IXa, VIIa, Xa, ProTrombin,
-  arrow_left, arrow_right, arrow_down, arrow_right_big, arrow_tray } from "./SystemCoagulationImports";
+//Импорт компонентов Пазла
+import { 
+  PreKalikrein, 
+  arrow_left} from "./SystemCoagulationImports";
+
+
+import { CoagulationProcessPuzzleText, CoagulationProcessPuzzleElements, initialDragList } from "./CoagulationProcessPuzzle";
 
 //Функция перетаскиваемого элемента
 export function Picture({ url, id }) {
@@ -39,52 +42,7 @@ const SystemCoagulationPuzzle = () => {
   };
 
   // Массив перетаскиваемый элементов
-  const initialDragList = [
-    {
-      id: 4,
-      url: IX,
-    },
-    {
-      id: 9,
-      url: NitiFibrina,
-    },
-    {
-      id: 5,
-      url: X,
-    },
-    {
-      id: 15,
-      url: V,
-    },
-    {
-      id: 6,
-      url: Trombin,
-    },
-    {
-      id: 3,
-      url: XI,
-    },
-    {
-      id: 7,
-      url: Fibrinogen,
-    },
-    {
-      id: 10,
-      url: VII,
-    },
-    {
-      id: 8,
-      url: Fibrin,
-    },
-    {
-      id: 2,
-      url: XII,
-    },
-    {
-      id: 1,
-      url: KALIKREIN,
-    },
-  ];
+ 
 
   const [dragList, setDragList] = useState(initialDragList);
   const [board, setBoard] = useState([]);
@@ -117,47 +75,29 @@ const SystemCoagulationPuzzle = () => {
     e.preventDefault();
     const id = parseInt(e.dataTransfer.getData("text/plain"));
     const nextExpectedId = board.length + 1; // Ожидаемый следующий id
-
-    // Проверяем, что перемещаемый элемент имеет правильный id
+  
     if (id === nextExpectedId) {
       const droppedPicture = dragList.find((picture) => picture.id === id);
       setBoard((prevBoard) => [...prevBoard, droppedPicture]);
-
-      // Удаляем перемещенный элемент из массива dragList
       setDragList((prevList) => prevList.filter((item) => item.id !== id));
-
-      // В зависимости от id активируем соответствующие изображения
-      switch (id) {
-        case 1:
-          setVisibleElements1(true);
-          break;
-        case 2:
-          setVisibleElements2(true);
-          break;
-        case 3:
-          setVisibleElements3(true);
-          break;
-        case 4:
-          setVisibleElements4(true);
-          break;
-        case 5:
-          setVisibleElements5(true);
-          break;
-        case 6:
-          setVisibleElements6(true);
-          break;
-        case 7:
-          setVisibleElements7(true);
-          break;
-        case 8:
-          setVisibleElements8(true);
-          break;
-        case 10:
-          setVisibleElements10(true);
-          break;
-        default:
-          break;
-      }
+      const setVisibleElement = (id) => {
+        switch (id) {
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+          case 5:
+          case 6:
+          case 7:
+          case 8:
+            return true;
+          case 10:
+            return true;
+          default:
+            return false;
+        }
+      };
+      setVisibleElement(id) && eval(`setVisibleElements${id}(true)`);
     }
   };
 
@@ -210,47 +150,6 @@ const SystemCoagulationPuzzle = () => {
     });
   };
 
-  //Автоматическая прокрутка при появлении элементов
-  useEffect(() => {
-    let scrollInterval;
-
-    const startScrollInterval = (scrollAmount, intervalTime, timeoutTime) => {
-        clearInterval(scrollInterval); // Очистим предыдущий интервал перед запуском нового
-        scrollInterval = setInterval(() => {
-            const textarea = document.querySelector(".puzzle__inform-click_textarea");
-            if (textarea) {
-                textarea.scrollTop += scrollAmount;
-            }
-        }, intervalTime);
-        setTimeout(() => {
-            clearInterval(scrollInterval);
-        }, timeoutTime);
-    };
-
-    const visibleTimerStartOrElementVisible = visibleTimerStartElement || VisibleElements1 || VisibleElements2 || VisibleElements3 || VisibleElements4 ||
-        VisibleElements5 || VisibleElements6 || VisibleElements7 || VisibleElements8 || VisibleElements10;
-
-    if (visibleTimerStartOrElementVisible) {
-        if (visibleTimerStartElement) {
-            startScrollInterval(20, 5, 2000);
-        } else if (VisibleElements1 || VisibleElements2 || VisibleElements7 || VisibleElements8) {
-            startScrollInterval(5, 25, 1200);
-        } else if (VisibleElements3 || VisibleElements4 || VisibleElements5) {
-            startScrollInterval(20, 5, 5000);
-        } else if (VisibleElements6) {
-          startScrollInterval(20, 5, 6000);
-      } else if (VisibleElements10) {
-            startScrollInterval(40, 25, 7500);
-        }
-    } else {
-        clearInterval(scrollInterval);
-    }
-
-    return () => clearInterval(scrollInterval);
-}, [visibleTimerStartElement, VisibleElements1, VisibleElements2, VisibleElements3, VisibleElements4,
-    VisibleElements5, VisibleElements6, VisibleElements7, VisibleElements8, VisibleElements10]);
-
-
   return (
     <div className="puzzle__main_container">
       {VisibleAnimDelete && (
@@ -279,80 +178,17 @@ const SystemCoagulationPuzzle = () => {
             <img className="fade-in back_con_2" src={arrow_left} alt=""></img>
             <img className="fade-in back_con_3" src={PreKalikrein} alt=""></img>
 
-            {VisibleElements1 && (
-              <img className="fade-in back_con_4" src={arrow_left} alt=""></img>
-            )}
-
-            {VisibleElements2 && (
-              <>
-                <img className="fade-in back_con_5" src={arrow_down} alt=""></img>
-                <img className="fade-in back_con_6" src={arrow_right} alt=""></img>
-                <img className="fade-in back_con_7" src={XIIa} alt=""></img>
-              </>
-            )}
-
-            {VisibleElements3 && (
-              <>
-                <img className="fade-in back_con_8" src={arrow_down} alt=""></img>
-                <img className="fade-in back_con_9" src={arrow_right} alt=""></img>
-                <img className="fade-in back_con_10" src={XIa} alt=""></img>
-              </>
-            )}
-
-            {VisibleElements4 && (
-              <>
-                <img className="fade-in back_con_11" src={arrow_down} alt=""></img>
-                <img className="fade-in back_con_12" src={arrow_right} alt=""></img>
-                <img className="fade-in back_con_13" src={IXa} alt=""></img>
-              </>
-            )}
-
-            {VisibleElements5 && (
-              <>
-                <h3 className="fade-in back_con_14">VIII, Ca</h3>
-                <img className="fade-in back_con_15" src={arrow_down} alt=""></img>
-                <img
-                  className="fade-in back_con_16"
-                  src={arrow_right_big}
-                ></img>
-                <img className="fade-in back_con_17" src={VIIa} alt=""></img>
-                <img className="fade-in back_con_18" src={arrow_down} alt=""></img>
-                <h3 className="fade-in back_con_19">III, Ca</h3>
-                <img className="fade-in back_con_20" src={Xa} alt=""></img>
-              </>
-            )}
-
-            {VisibleElements6 && (
-              <>
-                <img className="fade-in back_con_21" src={arrow_down} alt=""></img>
-                <h3 className="fade-in back_con_22">V, Ca</h3>
-                <img className="fade-in back_con_23" src={ProTrombin} alt=""></img>
-                <img className="fade-in back_con_24" src={arrow_right} alt=""></img>
-              </>
-            )}
-
-            {VisibleElements7 && (
-              <>
-                <img className="fade-in back_con_25" src={arrow_down} alt=""></img>
-                <img className="fade-in back_con_26" src={arrow_right} alt=""></img>
-              </>
-            )}
-
-            {VisibleElements8 && (
-              <>
-                <img className="fade-in back_con_27" src={arrow_tray} alt=""></img>
-              </>
-            )}
-
-            {VisibleElements10 && (
-              <>
-                <h3 className="fade-in back_con_28">
-                  Внешний путь<br></br>(Повреждение тканей)
-                </h3>
-                <img className="fade-in back_con_29" src={arrow_left} alt=""></img>
-                <img className="fade-in back_con_30" src={arrow_left} alt=""></img>
-              </>
-            )}
+            <CoagulationProcessPuzzleElements
+                VisibleElements1={VisibleElements1}
+                VisibleElements2={VisibleElements2}
+                VisibleElements3={VisibleElements3}
+                VisibleElements4={VisibleElements4}
+                VisibleElements5={VisibleElements5}
+                VisibleElements6={VisibleElements6}
+                VisibleElements7={VisibleElements7}
+                VisibleElements8={VisibleElements8}
+                VisibleElements10={VisibleElements10}
+            />
 
             {boardImages}
           </div>
@@ -437,161 +273,17 @@ const SystemCoagulationPuzzle = () => {
                   </TextTyper>
                 </li>
             </ul>)}
-            
-
-            {VisibleElements1 && (
-              <ul className="dot_subtext">
-                  <li>
-                  <TextTyper>
-                    Плазменный прекалликреин под действием ВМК превращается в
-                    калликреин.
-                    </TextTyper>
-                  </li>
-              </ul>
-            )}
-
-            {VisibleElements2 && (
-              <ul className="dot_subtext">
-                  <li><TextTyper>Калликреин активирует XII - ый фактор.</TextTyper></li>
-              </ul>
-            )}
-
-            {VisibleElements3 && (
-              <ul className="dot_subtext">
-                  <li> 
-                    <TextTyper>
-                    Активный XII - ый фактор - это сериновая протеаза (молекула,
-                    расщепляющая белки), он взаимодействует с XI - ым фактором
-                    неактивным и отщепляет от него часть. После чего XI - ый
-                    фактор становится активным.
-                    </TextTyper>
-                  </li>
-              </ul>
-            )}
-
-            {VisibleElements4 && (
-              <ul className="dot_subtext">
-                
-                  <li>
-                  <TextTyper>
-                    XI - ый активный фактор взаимодействует с IX -ым неактивным
-                    фактором и с ионами кальция, благодаря чему IX - ый фактор
-                    тоже активируется.
-                    </TextTyper>
-                  </li>
-                
-              </ul>
-            )}
-
-            {VisibleElements5 && (
-              <>
-                <ul className="dot_subtext">
-                  
-                    <li className="dot_subtext_point">
-                    <TextTyper>
-                      IX - ый фактор взаимодействует с VIII - ым активным
-                      фактором и ионами кальция, они активируют X - ый фактор.
-                      </TextTyper>
-                    </li>
-                  
-                </ul>
-                <ul className="dot_subtext">
-                  
-                    <li className="dot_subtext_point">
-                    <TextTyper>
-                      Сам VIII - ый фактор активируется II - ым фактором
-                      (тромбином).
-                      </TextTyper>
-                    </li>
-                  
-                </ul>
-              </>
-            )}
-
-            {VisibleElements6 && (
-              <ul className="dot_subtext">
-                
-                  <li className="dot_subtext_point">
-                  <TextTyper>
-                    X - ый активированный фактор взаимодействует с ионами
-                    кальция и со вспомогательным V - ым фактором, который тоже
-                    активируется тромбином. Таким образом, II - ой неактивный
-                    фактор (протромбин) превращается в тромбин (II - ой активный
-                    фактор).
-                    </TextTyper>
-                  </li>
-                
-              </ul>
-            )}
-
-            {VisibleElements7 && (
-              <ul className="dot_subtext">
-                
-                  <li className="dot_subtext_point">
-                  <TextTyper>
-                    Тромбин преобразует фибриноген в фибрин
-                    </TextTyper>
-                  </li>
-                
-              </ul>
-            )}
-
-            {VisibleElements8 && (
-              <ul className="dot_subtext">
-                
-                  <li className="dot_subtext_point">
-                  <TextTyper>
-                    Фибрин в дальнейшем полимеризуется и образует нити фибрина.
-                    </TextTyper>
-                  </li>
-                
-              </ul>
-            )}
-
-            {VisibleElements10 && (
-              <>
-                <div className="puzzle__task_sub-text">
-                  <TextTyper>
-                    <p>
-                      Внешний путь активации:
-                    </p>
-                  </TextTyper>
-                </div>
-                <ul className="dot_subtext">
-                  
-                    <li className="dot_subtext_point">
-                    <TextTyper>
-                      При повреждении эндотелия сосудов выделяется тканевой
-                      фактор (III - ий фактор). Он способствует превращению VII
-                      - го неактивного фактора в активный.
-                      </TextTyper>
-                    </li>
-                  
-                </ul>
-                <ul className="dot_subtext">
-                  
-                    <li className="dot_subtext_point">
-                    <TextTyper>
-                      VII - ой активный фактор взаимодействует с III - им
-                      фактором и ионами кальция, это способствует активации X -
-                      го фактора.
-                      </TextTyper>
-                    </li>
-                  
-                </ul>
-                <ul className="dot_subtext">
-                  
-                    <li className="dot_subtext_point">
-                    <TextTyper>
-                      Дальнейшая схема коагуляции соответствует внутреннего пути
-                      активации.
-                      </TextTyper>
-                    </li>
-                  
-                </ul>
-              </>
-            )}
-
+            <CoagulationProcessPuzzleText
+                VisibleElements1={VisibleElements1}
+                VisibleElements2={VisibleElements2}
+                VisibleElements3={VisibleElements3}
+                VisibleElements4={VisibleElements4}
+                VisibleElements5={VisibleElements5}
+                VisibleElements6={VisibleElements6}
+                VisibleElements7={VisibleElements7}
+                VisibleElements8={VisibleElements8}
+                VisibleElements10={VisibleElements10}
+            />
           </div>
           <div className="puzzle__inform-click_buttons">
             <button className="puzzle__restart" onClick={restartGame}>

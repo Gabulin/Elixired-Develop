@@ -50,7 +50,7 @@ const TaskThreeGeneralContraindicationsAnticoagulants = () => {
             <div className="challenge__scrollbar"></div>
           </div>
           <div className="challenge__buttons">
-          <Link to="/theory"> 
+          <Link to="/anticoagulants/side_effects"> 
             <button className="challenge__button_cont">Продолжить</button>
             </Link>
             <button className="challenge__button_explan" onClick={handleClick}>

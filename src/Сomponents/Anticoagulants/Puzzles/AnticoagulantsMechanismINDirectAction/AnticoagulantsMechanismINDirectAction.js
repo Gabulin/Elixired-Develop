@@ -21,7 +21,7 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
     if (progress >= 1) {
       const timeoutId = setTimeout(() => {
         setShowSecondImage(true);
-      }, 2000);
+      }, 500);
 
       return () => clearTimeout(timeoutId);
     } else {
@@ -41,10 +41,12 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
 
   const handleX2LeftClick = () => {
     setProgress((prevProgress) => Math.max(prevProgress - 100, 0));
+    setShowSecondImage(false);
   };
 
   const handleLeftClick = () => {
     setProgress((prevProgress) => Math.max(prevProgress - 50, 0));
+    setShowSecondImage(false);
   };
 
   return (
@@ -166,7 +168,7 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
               <TextTyper>
                 <p>
                   Нажимайте на стрелки, чтобы просмотреть тему "Механизмы
-                  действия антигоагулянтов прямого действия"
+                  действия антигоагулянтов непрямого действия"
                 </p>
               </TextTyper>
             </div>
@@ -204,11 +206,12 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
                 </div>
                 <div className="puzzle__task_sub-text">
                   <TextTyper>
-                    <p>
-                      {" "}
-                      Производные 4-оксикумарона: варфарин и
-                      аценокумаролПроизводное инандиона: фенидион
-                    </p>
+                    <p>Производные 4-оксикумарона: варфарин и аценокумарол</p>
+                  </TextTyper>
+                </div>
+                <div className="puzzle__task_sub-text" style={{ marginTop: "2px" }}>
+                  <TextTyper>
+                    <p>Производное инандиона: фенидион</p>
                   </TextTyper>
                 </div>
               </>
@@ -230,6 +233,6 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
       </div>
     </div>
   );
-};  
+};
 
 export default AnticoagulantsMechanismINDirectActionVideo;

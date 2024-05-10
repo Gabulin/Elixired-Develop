@@ -1,1 +1,16 @@
 @import url(../Puzzle.css);
+
+.puzzle__workspace_panel .picture-none-1 {
+    visibility: hidden;
+}
+.puzzle__workspace_panel .picture-none-2 {
+    visibility: hidden;
+}
+.puzzle__workspace_panel .picture-none-3 {
+    visibility: hidden;
+}
+
+.back_con_interactive {
+    z-index: 2;
+    cursor: pointer;
+}

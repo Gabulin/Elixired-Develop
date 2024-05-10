@@ -236,7 +236,7 @@ const TheoryMain = () => {
                   buttonText="Начать"
                   isOpen={activeButton === 15}
                   onClick={() => handleButtonClick(15)}
-                  route="/notfoundpage"
+                  route="/anticoagulants/side_effects"
                 />
                 <p>Основные побочные эффекты</p>
               </div>
