@@ -1,10 +1,7 @@
 import React from "react";
 import "./MainIndicatorsAnticoagulants.css";
 
-import leg from '../../../Media/Task/Anticoagulants/1. Coagulation system/leg.svg'
-import bed from "../../../Media/Task/Anticoagulants/1. Coagulation system/bed.svg";
-import blood from "../../../Media/Task/Anticoagulants/1. Coagulation system/blood.svg";
-import empty from "../../../Media/Task/Anticoagulants/1. Coagulation system/empty.svg";
+import { bed, blood, hearth, hearthtime, klapan, leg, lungs, tromboz } from '../AntocoagulantsPicImports';
 
 const MainIndicatorsAnticoagulants = ({ handleContinue }) => {
   return (
@@ -40,7 +37,7 @@ const MainIndicatorsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={leg} alt=""></img>
+            <img className="task_image-container-picture" src={lungs} alt=""></img>
           </div>
         </div>
         <div className="task__description_content-part">
@@ -50,7 +47,7 @@ const MainIndicatorsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={leg} alt=""></img>
+            <img className="task_image-container-picture" src={hearth} alt=""></img>
           </div>
         </div>
       </div>
@@ -71,11 +68,11 @@ const MainIndicatorsAnticoagulants = ({ handleContinue }) => {
             </ul>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={leg} alt=""></img>
-            <img className="task_image-container-picture" src={bed} alt=""></img>
-            <img className="task_image-container-picture" src={bed} alt=""></img>
-            <img className="task_image-container-picture" src={bed} alt=""></img>
-            <img className="task_image-container-picture" src={bed} alt=""></img>
+            <img className="task_image-container-picture" src={blood} alt=""></img>
+            <img className="task_image-container-picture" src={hearthtime} alt=""></img>
+            <img className="task_image-container-picture" src={tromboz} alt=""></img>
+            <img className="task_image-container-picture" src={hearth} alt=""></img>
+            <img className="task_image-container-picture" src={klapan} alt=""></img>
           </div>
         </div>
         </div>

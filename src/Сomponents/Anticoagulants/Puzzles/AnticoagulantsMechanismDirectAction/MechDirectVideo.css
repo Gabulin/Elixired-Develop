@@ -25,3 +25,10 @@
     color: #8F00FF;
     cursor: pointer;
 }
+
+.dot_subtext_point.mech {
+    margin-top: 0;
+}
+.puzzle__task_sub-text.mech {
+    margin-top: 0;
+}

@@ -6,9 +6,10 @@ import TwoInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Inter
 import ThreeInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Interaction/ThreeInteractionAnticoagulants";
 import FourInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Interaction/FourInteractionAnticoagulants";
 import FiveInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Interaction/FiveInteractionAnticoagulants";
+import SixInteractionAnticoagulants from "../../Сomponents/Anticoagulants/Interaction/SixInteractionAnticoagulants";
 
 const SliderInteractionsAnt = () => {
-  const components = [OneInteractionAnticoagulants, TwoInteractionAnticoagulants, ThreeInteractionAnticoagulants, FourInteractionAnticoagulants, FiveInteractionAnticoagulants];
+  const components = [OneInteractionAnticoagulants, TwoInteractionAnticoagulants, ThreeInteractionAnticoagulants, FourInteractionAnticoagulants, FiveInteractionAnticoagulants, SixInteractionAnticoagulants];
   return <SliderPages components={components} sliderWidth="83px" sliderHeight="9px"/>;
 };
 

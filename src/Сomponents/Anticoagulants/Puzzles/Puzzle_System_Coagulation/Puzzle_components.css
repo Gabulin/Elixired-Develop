@@ -1,5 +1,10 @@
 
 /*Размеры */
+.puzzle__slider_content .picture-6 {
+    width: 215px;
+    height: 63px;
+}
+
   .puzzle__workspace_panel .picture-1,
   .puzzle__workspace_panel .picture-6,
   .puzzle__workspace_panel .picture-7,
@@ -53,8 +58,8 @@
 }
 
 .puzzle__workspace_panel .picture-6 {
-    top: 320px;
-    left: 450px;
+    top: 322px;
+    left: 285px;
 }
 
 .puzzle__workspace_panel .picture-7 {
@@ -233,8 +238,18 @@
 
 .puzzle__workspace_panel .back_con_23 {
     position: absolute;
-    top: 319px;
-    left: 284px; 
+    top: 322px;
+    left: 285px; 
+    width: 106px;
+    height: 31px;
+}
+
+.back_con_404 {
+    position: absolute;
+    top: 322px;
+    left: 452px; 
+    width: 106px;
+    height: 31px;
 }
 
 .puzzle__workspace_panel .back_con_24 {

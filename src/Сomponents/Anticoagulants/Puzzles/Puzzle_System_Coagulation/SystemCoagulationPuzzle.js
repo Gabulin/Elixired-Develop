@@ -6,6 +6,7 @@ import "./SystemCoagulationPuzzle.css";
 import "./Puzzle_components.css";
 //Утилиты
 import TextTyper from "../../../../Utils/TextTyper";
+import showAlert from "../../../../Utils/ShowAlert";
 
 //Анимация рестарта
 import AnimationDeleteRestart from "../../../../Media/PreLoader/deleteRestartAnimation.json"
@@ -36,9 +37,10 @@ export function Picture({ url, id }) {
 }
 
 const SystemCoagulationPuzzle = () => {
+
   //Функция роута
   const navigateToAnticoagulants = () => {
-    window.location.href = "/theory";
+    window.location.href = "/anticoagulants/mechanism";
   };
 
   // Массив перетаскиваемый элементов
@@ -52,7 +54,7 @@ const SystemCoagulationPuzzle = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setvisibleTimerStartElement(true);
-    }, 12000); 
+    }, 4000); 
 
     return () => clearTimeout(timer);
   }, []); // [] означает, что useEffect будет вызван только после монтирования компонента
@@ -98,6 +100,8 @@ const SystemCoagulationPuzzle = () => {
         }
       };
       setVisibleElement(id) && eval(`setVisibleElements${id}(true)`);
+    }  else {
+      showAlert();
     }
   };
 
@@ -149,6 +153,33 @@ const SystemCoagulationPuzzle = () => {
       behavior: "smooth",
     });
   };
+  // Автоскролл
+  useEffect(() => {
+    let scrollInterval;
+
+    const startScrollInterval = () => {
+        clearInterval(scrollInterval);
+        scrollInterval = setInterval(() => {
+            const textarea = document.querySelector(".puzzle__inform-click_textarea");
+            if (textarea) {
+                textarea.scrollTop += 15;
+            }
+        }, 25);
+        setTimeout(() => clearInterval(scrollInterval), 1000);
+    };
+
+    const visibleElements = [visibleTimerStartElement, VisibleElements1, VisibleElements2, VisibleElements3, VisibleElements4, VisibleElements5, VisibleElements6, VisibleElements7, VisibleElements8, VisibleElements10];
+    const visibleTimerStartOrElementVisible = visibleElements.some(element => element);
+
+    if (visibleTimerStartOrElementVisible) {
+        startScrollInterval();
+    } else {
+        clearInterval(scrollInterval);
+    }
+
+    return () => clearInterval(scrollInterval);
+}, [visibleTimerStartElement, VisibleElements1, VisibleElements2, VisibleElements3, VisibleElements4, VisibleElements5, VisibleElements6, VisibleElements7, VisibleElements8, VisibleElements10]);
+
 
   return (
     <div className="puzzle__main_container">
@@ -266,11 +297,7 @@ const SystemCoagulationPuzzle = () => {
             </div>
             {visibleTimerStartElement && (<ul className="dot_subtext">
                 <li>
-                  <TextTyper>
-                Образуется комплекс на поверхности тромбоцитарного агреганта
-                  из плазменного прекалликреина, ВМК (высокомолекулярного
-                  кининогена и XII - го неактивного фактора).
-                  </TextTyper>
+                Внутренний путь происходит на поверхности тромбоцитов, где идет сборка комплекса, состоящего из плазменного прекалликреина,высокомолекулярного кининогена (ВМК) и   XII - го неактивного фактора.
                 </li>
             </ul>)}
             <CoagulationProcessPuzzleText

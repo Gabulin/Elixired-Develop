@@ -36,7 +36,7 @@ const App = () => {
     { path: "", element: <><Header/><MainContent /><Footer /></> },
     { path: "/theory", element: <><Header /><TheoryMain /><Footer /></> },
     { path: "/anticoagulants/main_Indicators", element: <><SliderMainIndicators /><Footer /></> },
-    { path: "/anticoagulants/side_effects", element: <><Header/><AntSideEffects /><Footer /></> },
+    { path: "/anticoagulants/side_effects", element: <><AntSideEffects /><Footer /></> },
     { path: "/anticoagulants/general_contraindications", element: <><SliderGeneralContraindicationsAnt /><Footer /></> },
     { path: "/anticoagulants/interactions", element: <><SliderInteractionsAnt /><Footer /></> },
     { path: "*", element: <><NotFoundPage /></> },

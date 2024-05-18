@@ -1,10 +1,12 @@
 import React from "react";
 import "./GeneralContraindicationsAnticoagulants.css";
 
-import leg from "../../../Media/Task/Anticoagulants/1. Coagulation system/leg.svg";
-import bed from "../../../Media/Task/Anticoagulants/1. Coagulation system/bed.svg";
-import blood from "../../../Media/Task/Anticoagulants/1. Coagulation system/blood.svg";
-import empty from "../../../Media/Task/Anticoagulants/1. Coagulation system/empty.svg";
+import {pregnantImage,
+  liverImage,
+  lactImage,
+  hearthtickImage,
+  bleedingImage,
+  allergiaImage} from "../AntocoagulantsPicImports"
 
 const GeneralContraindicationsAnticoagulants = ({ handleContinue }) => {
   return (
@@ -21,7 +23,7 @@ const GeneralContraindicationsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={empty} alt=""></img>
+            <img className="task_image-container-picture" src={allergiaImage} alt=""></img>
           </div>
         </div>
 
@@ -32,7 +34,7 @@ const GeneralContraindicationsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={empty} alt=""></img>
+            <img className="task_image-container-picture" src={bleedingImage} alt=""></img>
           </div>
         </div>
 
@@ -43,7 +45,7 @@ const GeneralContraindicationsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={empty} alt=""></img>
+            <img className="task_image-container-picture" src={liverImage} alt=""></img>
           </div>
         </div>
 
@@ -54,7 +56,7 @@ const GeneralContraindicationsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={empty} alt=""></img>
+            <img className="task_image-container-picture" src={hearthtickImage} alt=""></img>
           </div>
         </div>
 
@@ -65,7 +67,7 @@ const GeneralContraindicationsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={empty} alt=""></img>
+            <img className="task_image-container-picture" src={pregnantImage} alt=""></img>
           </div>
         </div>
 
@@ -76,7 +78,7 @@ const GeneralContraindicationsAnticoagulants = ({ handleContinue }) => {
             </ol>
           </div>
           <div className="task__description_content-img_container">
-            <img className="task_image-container-picture" src={empty} alt=""></img>
+            <img className="task_image-container-picture" src={lactImage} alt=""></img>
           </div>
         </div>
         

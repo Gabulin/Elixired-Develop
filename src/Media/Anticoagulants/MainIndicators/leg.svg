@@ -1,0 +1,15 @@
+<svg width="80.000000" height="80.000000" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip507_8202">
+			<rect id="svg-gobbler (1) 1" width="31.000000" height="31.000000" transform="translate(25.000000 24.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<path id="Polygon 3" d="M40 0L5.35 20L5.35 60L40 80L74.64 60L74.64 20L40 0Z" fill="#E8E8E8" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<rect id="svg-gobbler (1) 1" width="31.000000" height="31.000000" transform="translate(25.000000 24.000000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip507_8202)">
+		<path id="Vector" d="M49.86 49.34L40.19 44.23L40.19 24.9L27.3 24.9C27.38 27.87 27.91 31.25 29.05 34.09C30.23 37.01 30.94 40.09 31.1 43.22L31.18 44.8L30.23 48.46C29.93 50.33 30.76 52.02 32.13 53.08C33.39 54.06 35.05 54.32 36.57 53.87C38.73 53.23 41.51 53.09 43.64 54.09L51.35 54.09C52.66 54.09 53.71 53.02 53.71 51.71C53.71 50.4 52.66 49.34 51.35 49.34L49.86 49.34Z" stroke="#8F00FF" stroke-opacity="1.000000" stroke-width="2.636719"/>
+	</g>
+</svg>

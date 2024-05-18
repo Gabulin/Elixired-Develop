@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 //Анимация
 import Lottie from 'react-lottie-player';
 //Стили
-import "./AntiMechINDirectActionPuzzle.css";
+import "./AntiMechINDirectActionPuzzle.css"
 //Утилиты
 import TextTyper from "../../../../Utils/TextTyper";
+import showAlert from "../../../../Utils/ShowAlert";
 
 //Анимация рестарта
 import AnimationDeleteRestart from "../../../../Media/PreLoader/deleteRestartAnimation.json"
@@ -24,7 +25,7 @@ export function Picture({ url, id }) {
       alt=""
       onDragStart={handleDragStart}
       draggable="true"
-      className={`picture picture-${id} picture-none-${id}`}
+      className={`picture picture-none-${id}`}
     />
   );
 }
@@ -69,32 +70,32 @@ const SystemCoagulationPuzzle = () => {
     e.preventDefault();
     const id = parseInt(e.dataTransfer.getData("text/plain"));
     const nextExpectedId = board.length + 1; // Ожидаемый следующий id
-  
-    if (id === nextExpectedId) {
-      const droppedPicture = dragList.find((picture) => picture.id === id);
-      setBoard((prevBoard) => [...prevBoard, droppedPicture]);
-      setDragList((prevList) => prevList.filter((item) => item.id !== id));
-      const setVisibleElement = (id) => {
-        switch (id) {
-          case 1:
-          case 2:
-          case 3:
-          case 4:
-          case 5:
-          case 6:
-          case 7:
-          case 8:
-            return true;
-          case 10:
-            return true;
-          default:
-            return false;
-        }
-      };
-      setVisibleElement(id) && eval(`setVisibleElements${id}(true)`);
-    }
-  };
 
+    if (id <= 3 || id === nextExpectedId) {
+        const droppedPicture = dragList.find((picture) => picture.id === id);
+        if (droppedPicture) {
+            setBoard((prevBoard) => [...prevBoard, droppedPicture]);
+            setDragList((prevList) => prevList.filter((item) => item.id !== id));
+            const setVisibleElement = (id) => {
+                switch (id) {
+                    case 1:
+                    case 2:
+                    case 3:
+                        return true;
+                    case 10:
+                        return true;
+                    default:
+                        return false;
+                }
+            };
+            setVisibleElement(id) && eval(`setVisibleElements${id}(true)`);
+        } else {
+            
+        }
+    } else {
+        showAlert();
+    }
+};
   const handleDragOver = (e) => {
     e.preventDefault();
   };
@@ -155,6 +156,10 @@ const [viiaClicked, setViiaClicked] = useState(false);
     setTimeout(() => {
       setVisibleElements7(false)
     }, 5000)
+  }
+
+  const handleWrongClick = () => {
+    showAlert();
   }
   
   const isAnticoagulantsButtonActive = xaClicked && proTrombinClicked && ixaClicked && viiaClicked;
@@ -227,6 +232,7 @@ const [viiaClicked, setViiaClicked] = useState(false);
                 handleProTrombinClick={handleProTrombinClick}
                 handleIXaClick={handleIXaClick}
                 handleVIIaClick={handleVIIaClick}
+                handleWrongClick={handleWrongClick}
                 VisibleElements1={VisibleElements1}
                 VisibleElements2={VisibleElements2}
                 VisibleElements3={VisibleElements3}
@@ -283,6 +289,25 @@ const [viiaClicked, setViiaClicked] = useState(false);
                 VisibleElements8={VisibleElements8}
                 VisibleElements10={VisibleElements10}
             />
+
+            {isAnticoagulantsButtonActive && (
+              <>
+              <div className="puzzle__task_sub-text">
+              <TextTyper order>
+                <p>
+                Отлично, ты нашёл все факторы!
+                </p>
+              </TextTyper>
+            </div>
+            <div className="puzzle__task_sub-text">
+              <TextTyper order>
+                <p>
+                Теперь ты можешь перейти к следующему заданию
+                </p>
+              </TextTyper>
+            </div>
+            </>
+            )}
           </div>
           <div className="puzzle__inform-click_buttons">
             <button className="puzzle__restart" onClick={restartGame}>

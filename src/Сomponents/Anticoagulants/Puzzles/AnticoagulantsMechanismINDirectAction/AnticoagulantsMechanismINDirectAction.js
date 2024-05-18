@@ -6,10 +6,12 @@ import TextTyper from "../../../../Utils/TextTyper";
 
 //Импорт компонентов видео
 import {
+  INDirectMechStandart,
   DirectMechStandart,
   INDirectMechStepOneOne,
   INDirectMechStepOneTwo,
   INDirectMechStepTwoOne,
+  INDirectMechStepTwoTwo
 } from "../AnticoagulantsMechanismImports";
 
 const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
@@ -59,7 +61,7 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
           <div className="puzzle__workspace_panel">
             <img
               className="fade-in back_step"
-              src={DirectMechStandart}
+              src={INDirectMechStandart}
               alt=""
             ></img>
 
@@ -110,7 +112,16 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
                   src={INDirectMechStepTwoOne}
                   alt=""
                 ></img>
-                <div
+                
+                {showSecondImage && (
+                  <>
+                  <img
+                    className="fade-in back_step"
+                    src={INDirectMechStepTwoTwo}
+                    alt=""
+                  ></img>
+
+                  <div
                   className="explanation__button_cont"
                   onClick={handleLeftClick}
                 >
@@ -134,6 +145,8 @@ const AnticoagulantsMechanismINDirectActionVideo = ({ handleContinue }) => {
                     />
                   </svg>
                 </div>
+                </>
+                )}
               </>
             )}
           </div>

@@ -1,13 +1,29 @@
 @import url(../Puzzle.css);
 
 .puzzle__workspace_panel .picture-none-1 {
-    visibility: hidden;
+    width: 200px;
+    height: 31px;
+    position: absolute;
+    top: 119px;
+    right: 75px;
+    z-index: 2;
 }
 .puzzle__workspace_panel .picture-none-2 {
-    visibility: hidden;
+    width: 200px;
+    height: 31px;
+    position: absolute;
+    top: 157px;
+    right: 75px;
+    z-index: 2;
+    
 }
 .puzzle__workspace_panel .picture-none-3 {
-    visibility: hidden;
+    width: 200px;
+    height: 31px;
+    position: absolute;
+    top: 196px;
+    right: 75px;
+    z-index: 2;
 }
 
 .back_con_interactive {
