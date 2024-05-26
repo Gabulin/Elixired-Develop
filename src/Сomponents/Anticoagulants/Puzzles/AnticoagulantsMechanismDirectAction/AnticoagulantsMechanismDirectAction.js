@@ -195,7 +195,7 @@ const AnticoagulantsMechanismDirectActionVideo = ({ handleContinue }) => {
                   src={DirectMechStepFourThree}
                   alt=""
                 ></img>
-                
+
                 <div
                   className="explanation__button_cont"
                   onClick={handleLeftClick}
@@ -358,8 +358,8 @@ const AnticoagulantsMechanismDirectActionVideo = ({ handleContinue }) => {
                 <div className="fade-in">
                   <p className="puzzle__task_sub-text">
                     <strong>Противопоказания:</strong> активные кровотечения,
-                    заболевания связанные с опасностью кровотечения (язвы
-                    желудка, ДПК, зно, туберкулез), зно.
+                    заболевания связанные с опасностью кровотечения (язва
+                    желудка, ДПК, злокачественные новообразования, туберкулез).
                   </p>
                 </div>
               </>
@@ -428,9 +428,10 @@ const AnticoagulantsMechanismDirectActionVideo = ({ handleContinue }) => {
                     тромбоцитопения, остеопороз, аллергия.
                   </p>
                   <p className="puzzle__task_sub-text">
-                    <strong>Противопоказания:</strong> Гипокоагуляция, почечная
-                    и печеночная недостаточность, заболевания связанные с
-                    опасностью кровотечения (язвы желудка, ДПК, зно, туберкулез)
+                    <strong>Противопоказания:</strong> Неконтролируемая АГ,
+                    гипокоагуляция, почечная и печеночная недостаточность,
+                    заболевания связанные с опасностью кровотечения (язвы
+                    желудка, ДПК, злокачественные новообразования, туберкулез)
                   </p>
                 </div>
                 <div className="fade-in">
@@ -492,7 +493,8 @@ const AnticoagulantsMechanismDirectActionVideo = ({ handleContinue }) => {
                     <strong>антитромбином III</strong> и изменяет его
                     конформацию. Активный центр антитромбина III связывает{" "}
                     <strong>Х-ый активный фактор</strong>, что приводит к{" "}
-                    <strong>остановке внешнего пути</strong> свертывания крови. Также{" "}
+                    <strong>остановке внешнего пути</strong> свертывания крови.
+                    Также{" "}
                     <strong>антитромбин III связывается с тромбином</strong>(для
                     этого необходим не только активный центр антитромбина III,
                     но и цепь гепарина не короче определенной длины), приводя к

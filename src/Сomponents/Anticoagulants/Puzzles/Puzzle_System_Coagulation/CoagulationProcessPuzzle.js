@@ -144,21 +144,22 @@ export const CoagulationProcessPuzzleText = ({
           </div>
           <ul className="fade-in dot_subtext">
             <li className="fade-in dot_subtext_point">
-              При повреждении эндотелия сосудов выделяется тканевой фактор{" "}
-              <strong>(III - ий фактор)</strong>. Он способствует превращению{" "}
-              <strong>VII - го неактивного фактора в активный.</strong>
+              При повреждении эндотелия сосудов выделяется тканевой фактор
+              <strong>(фактор III)</strong>. Он способствует превращению
+              <strong>неактивного фактора VII в активный</strong>
             </li>
           </ul>
           <ul className="fade-in dot_subtext">
             <li className="fade-in dot_subtext_point">
-              <strong>VII - ой</strong> активный фактор взаимодействует с{" "}
-              <strong>III - им фактором</strong> и ионами кальция, это
-              способствует <strong>активации X - го фактора.</strong>
+              Активный фактор VIIа  взаимодействует с фактором{" "}
+              <strong>III</strong>  и ионами кальция, образуя{" "}
+              <strong>комплекс (IIIa-VIIa-Ca2+),</strong> который способствует
+              активации <strong>фактора X.</strong>
             </li>
           </ul>
           <ul className="fade-in dot_subtext">
             <li className="fade-in dot_subtext_point">
-              Дальнейшая схема коагуляции соответствует внутреннего пути
+              Дальнейшая схема коагуляции соответствует внутреннему пути
               активации.
             </li>
             <li className="fade-in dot_subtext_point">

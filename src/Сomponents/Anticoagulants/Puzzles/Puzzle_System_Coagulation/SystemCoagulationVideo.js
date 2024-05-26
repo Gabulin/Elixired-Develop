@@ -385,7 +385,7 @@ const SystemCoagulationVideo = ({ handleContinue }) => {
               <ul className="fade-in dot_subtext">
                 <li>
                   XI - ый активный фактор взаимодействует с IX -ым неактивным
-                  фактором и с <strong>ионами кальция</strong>, благодаря чему{" "}
+                  фактором и с <strong>ионами кальция</strong>, благодаря чему
                   <strong>IX - ый фактор</strong>
                   тоже активируется.
                 </li>
@@ -403,7 +403,7 @@ const SystemCoagulationVideo = ({ handleContinue }) => {
                 </ul>
                 <ul className="fade-in dot_subtext">
                   <li className="dot_subtext_point">
-                    Сам VIII - ой фактор активируется{" "}
+                    Сам VIII - ой фактор активируется
                     <strong>II - ым фактором (тромбином).</strong>
                   </li>
                 </ul>
@@ -414,11 +414,11 @@ const SystemCoagulationVideo = ({ handleContinue }) => {
               <ul className="fade-in dot_subtext">
                 <li className="dot_subtext_point">
                   <strong>X - ый активированный фактор</strong> взаимодействует
-                  с ионами кальция и со вспомогательным{" "}
+                  с ионами кальция и со вспомогательным
                   <strong>V - ым фактором</strong> (данный фактор тоже
-                  активируется тромбином), образуя <strong>комплекс</strong>{" "}
-                  (Xa-Va-Ca2+), который превращает II - ой неактивный фактор{" "}
-                  <strong>(протромбин)</strong> во  II - ой активный фактор{" "}
+                  активируется тромбином), образуя <strong>комплекс</strong>
+                  (Xa-Va-Ca2+), который превращает II - ой неактивный фактор
+                  <strong>(протромбин)</strong> во  II - ой активный фактор
                   <strong>(тромбин)</strong>
                 </li>
               </ul>
@@ -427,7 +427,7 @@ const SystemCoagulationVideo = ({ handleContinue }) => {
             {progress >= 80 && (
               <ul className="fade-in dot_subtext">
                 <li className="dot_subtext_point">
-                  Тромбин преобразует <strong>фибриноген</strong> в{" "}
+                  Тромбин преобразует <strong>фибриноген</strong> в
                   <strong>фибрин - мономер</strong>
                 </li>
               </ul>
@@ -444,37 +444,38 @@ const SystemCoagulationVideo = ({ handleContinue }) => {
 
             {progress >= 100 && (
               <>
-                <div className="fade-in">
-                  <p className="puzzle__task_sub-text">
-                    Внешний путь активации:
-                  </p>
-                </div>
-                <ul className="fade-in dot_subtext">
-                  <li className="dot_subtext_point">
-                    <strong>При повреждении</strong> эндотелия сосудов
-                    выделяется тканевой фактор
-                    <strong>(III - ий фактор).</strong> Он способствует
-                    превращению{" "}
-                    <strong>VII - го неактивного фактора в активный.</strong>
-                  </li>
-                  <li className="dot_subtext_point">
-                    <strong>VII - ой</strong> активный фактор взаимодействует с <strong>III - им фактором</strong>
-                    и ионами кальция, образуя <strong>комплекс</strong> (Xa-Va-Ca2+),
-                    который способствует <strong>активации X - го фактора.</strong>
-                  </li>
-                  <li className="dot_subtext_point">
-                    Дальнейшая схема коагуляции соответствует внутреннего пути
-                    активации.
-                  </li>
-                  <li className="dot_subtext_point">
-                    Также внутренний и внешний путь не являются полностью
-                    раздельными процессами даже до того, как они соединяются на
-                    схеме, так как до момента их соединения между ними
-                    существуют различные положительные обратные связи, которые
-                    способствуют свертыванию крови.
-                  </li>
-                </ul>
-              </>
+          <div className="fade-in">
+            <p className="puzzle__task_sub-text">Внешний путь активации:</p>
+          </div>
+          <ul className="fade-in dot_subtext">
+            <li className="fade-in dot_subtext_point">
+              При повреждении эндотелия сосудов выделяется тканевой фактор
+              <strong>(фактор III)</strong>. Он способствует превращению
+              <strong>неактивного фактора VII в активный</strong>
+            </li>
+          </ul>
+          <ul className="fade-in dot_subtext">
+            <li className="fade-in dot_subtext_point">
+              Активный фактор VIIа  взаимодействует с фактором
+              <strong>III</strong>  и ионами кальция, образуя
+              <strong>комплекс (IIIa-VIIa-Ca2+),</strong> который способствует
+              активации <strong>фактора X.</strong>
+            </li>
+          </ul>
+          <ul className="fade-in dot_subtext">
+            <li className="fade-in dot_subtext_point">
+              Дальнейшая схема коагуляции соответствует внутреннему пути
+              активации.
+            </li>
+            <li className="fade-in dot_subtext_point">
+              Также внутренний и внешний путь не являются полностью раздельными
+              процессами даже до того, как они соединяются на схеме, так как до
+              момента их соединения между ними существуют различные
+              положительные обратные связи, которые способствуют свертыванию
+              крови.
+            </li>
+          </ul>
+        </>
             )}
           </div>
           <div className="puzzle__inform-click_buttons">
